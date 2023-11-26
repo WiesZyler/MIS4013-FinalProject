@@ -1,11 +1,11 @@
 <?php
 require_once("util-db.php");
-require_once("model/pack.php");
+require_once("Models/pack.php");
 
 $PageTitle = "Packs";
-include "views/header.php";
+include "Views/header.php";
 
 $packs = selectPack();
-include "views/pack/index.php";
-include "views/footer.php";
+include "Views/pack/index.php";
+include "Views/footer.php";
 ?>
