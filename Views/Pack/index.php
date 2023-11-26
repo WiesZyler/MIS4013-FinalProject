@@ -1,11 +1,20 @@
 <div id="table"></div>
 <script>
-
+  {
+    async function ShowTable()
+      {
+    let r = await fetch( '<?php selectPack ?>' );
+    let rj = await r.json();
+ 
+  
 const grid = new Grid({
-  data: [
-    ['John', 'john@example.com', '(353) 01 222 3333'],
-    ['Mark', 'mark@gmail.com',   '(01) 22 888 4444']
-  ]
+  data: rj
 });
+      }
+
+
+  }
+
+
   
 </script>
