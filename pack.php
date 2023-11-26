@@ -6,6 +6,6 @@ $PageTitle = "Packs";
 include "view/header.php";
 
 $packs = selectPack();
-include "view/pack/page.php";
+include "view/pack/index.php";
 include "view/footer.php";
 ?>
