@@ -3,9 +3,9 @@ require_once("util-db.php");
 require_once("model/pack.php");
 
 $PageTitle = "Packs";
-include "view/header.php";
+include "views/header.php";
 
 $packs = selectPack();
-include "view/pack/index.php";
-include "view/footer.php";
+include "views/pack/index.php";
+include "views/footer.php";
 ?>
