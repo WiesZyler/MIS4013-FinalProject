@@ -2,7 +2,7 @@
 function selectPack() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PackID, PName, PReleaseDate FROM `pack`");
+        $stmt = $conn->prepare("SELECT PackID, PName, PReleaseDate FROM `Pack`");
         $stmt->execute();
         $result = $stmt->get_result();
         
