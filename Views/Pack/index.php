@@ -1,7 +1,11 @@
   <!-- Data table -->
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-
+<style>
+  .gridjs-search {
+  float: right;
+}
+</style>
 <div id="tbl"></div>
 <script>
 const grid = new gridjs.Grid({
@@ -35,7 +39,7 @@ const grid = new gridjs.Grid({
       'border-bottom': '1px solid #2e2e2e',
       'text-align': 'center',
     },
-    input.gridjs-input: {
+    search: {
       'background-color': '#8b2e2e', 
       color: '#378',
     },
