@@ -15,11 +15,10 @@ const grid = new gridjs.Grid({
     ?>
   ],
   style: {
-    grid: {
-      'background-color': '#1e1e1e',
+   header: {
+      'background-color': '#2e2e2e',
       color: '#ddd',
-      'font-family': 'Arial, sans-serif',
-    },
+      'text-align': 'center',
     table: {
       border: '1px solid #2e2e2e',
     },
@@ -32,10 +31,6 @@ const grid = new gridjs.Grid({
     td: {
       'border-bottom': '1px solid #2e2e2e',
       'text-align': 'center',
-    },
-    pagination: {
-      'background-color': '#2e2e2e',
-      color: '#ddd',
     },
   }
 });
