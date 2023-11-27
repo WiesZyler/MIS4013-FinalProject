@@ -17,21 +17,32 @@ const grid = new gridjs.Grid({
     ?>
   ],
   style: {
+    grid: {
+      'background-color': '#1e1e1e',
+      color: '#ddd',
+      'font-family': 'Arial, sans-serif',
+    },
     table: {
-      border: '3px solid #ccc'
+      border: '1px solid #2e2e2e',
     },
     th: {
-      'background-color': 'rgba(44,47,51,0.1)',
-      color: '#99aab5',
-      'border-bottom': '3px solid #ccc',
-      'text-align': 'center'
+      'background-color': '#2e2e2e',
+      color: '#ddd',
+      'border-bottom': '1px solid #2e2e2e',
+      'text-align': 'center',
     },
     td: {
-       'background-color': 'rgba(44,47,51,0.1)',
-      color: '#99aab5',
-      'border-bottom': '3px solid #ccc',
-      'text-align': 'center'
-    }
+      'border-bottom': '1px solid #2e2e2e',
+      'text-align': 'center',
+    },
+    search: {
+      'background-color': '#2e2e2e',
+      color: '#ddd',
+    },
+    pagination: {
+      'background-color': '#2e2e2e',
+      color: '#ddd',
+    },
   }
 });
   grid.render(tbl);
