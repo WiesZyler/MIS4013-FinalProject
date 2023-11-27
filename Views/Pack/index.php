@@ -6,7 +6,7 @@ const grid = new Grid({
    <?php While($pack = $packs->fetch_assoc())
      {
      echo 
-       "['".$Pack['PackID']."', '". $Pack['PName'] . "', '" . Pack['ReleaseDate']."'],"
+       "['".$Pack['PackID']."', '". $Pack['PName'] . "', '" . Pack['PReleaseDate']."'],"
     
        }
 ?>
