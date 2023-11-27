@@ -36,7 +36,7 @@ const grid = new gridjs.Grid({
       'text-align': 'center',
     },
     search: {
-      'background-color': '#2e2e2e',
+      'background-color': '#8b2e2e', 
       color: '#378',
     },
     pagination: {
