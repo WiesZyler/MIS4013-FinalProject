@@ -4,7 +4,7 @@
 
 
 <script>
-const grid = new Grid({
+const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   data: [
     <?php 
