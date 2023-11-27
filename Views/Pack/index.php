@@ -4,8 +4,11 @@
 <style>
   .gridjs-search {
   float: right;
-    'background-color': '#8b2e2e', 
+    
 }
+  .input.gridjs-input{
+    'background-color': '#8b2e2e', 
+  }
 </style>
 <div id="tbl"></div>
 <script>
