@@ -35,7 +35,7 @@ const grid = new gridjs.Grid({
       'border-bottom': '1px solid #2e2e2e',
       'text-align': 'center',
     },
-    search: {
+    input.gridjs-input: {
       'background-color': '#8b2e2e', 
       color: '#378',
     },
