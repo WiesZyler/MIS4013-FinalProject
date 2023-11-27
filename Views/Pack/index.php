@@ -22,7 +22,7 @@ const grid = new gridjs.Grid({
     },
     th: {
       'background-color': 'rgba(44,47,51,0.1)',
-      color: '#99aab5,
+      color: '#99aab5',
       'border-bottom': '3px solid #ccc',
       'text-align': 'center'
     },
