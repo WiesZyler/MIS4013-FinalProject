@@ -15,7 +15,21 @@ const grid = new gridjs.Grid({
       echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
     }
     ?>
-  ]
+  ],
+  style: {
+    table: {
+      border: '3px solid #ccc'
+    },
+    th: {
+      'background-color': 'rgba(44,47,51,0.1)',
+      color: '#99aab5,
+      'border-bottom': '3px solid #ccc',
+      'text-align': 'center'
+    },
+    td: {
+      'text-align': 'center'
+    }
+  }
 });
   grid.render(tbl);
 </script>
