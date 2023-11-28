@@ -14,6 +14,12 @@ const grid = new gridjs.Grid({
       echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "'],'" . $card['CRarity'] . "'],";
     }
     ?>
+const grid = new gridjs.Grid({
+  columns: ['Card ID', 'Card Name', 'Card Color', 'Card Type', 'Card Rarity'],
+  sort: true,
+  pagination: true,
+  data: [
+    
   ],
   style: {
     grid: {
@@ -40,5 +46,32 @@ const grid = new gridjs.Grid({
     },
   }
 });
+  function applyDarkMode() {
+  const darkStyles = {
+    grid: {
+      'background-color': '#111', // Darker background color
+      color: '#eee', // Lighter text color
+    },
+    table: {
+      border: '1px solid #333', // Darker border color
+    },
+    th: {
+      'background-color': '#333', // Darker header background color
+      color: '#eee', // Lighter header text color
+    },
+    td: {
+      'border-bottom': '1px solid #333', // Darker border color for cells
+    },
+    pagination: {
+      'background-color': '#333', // Darker pagination background color
+      color: '#eee', // Lighter pagination text color
+    },
+  };
+
+  grid.updateConfig({ style: darkStyles }).forceRender();
+}
+
+// Call applyDarkMode() to apply the dark mode styles
+applyDarkMode();
   grid.render(tb3);
 </script>
