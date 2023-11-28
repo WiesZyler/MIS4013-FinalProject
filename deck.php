@@ -6,7 +6,7 @@ require_once("Models/deck.php");
 $PageTitle = "Decks";
 include "Views/header.php";
 
-$decks = selectPack();
+$decks = selectDeck();
 include "Views/Deck/index.php";
 include "Views/footer.php";
 
