@@ -48,17 +48,20 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Example</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pack.php">Pack</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="deck.php">Deck</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="card.php">Card</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="pack.php">Packs</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="deck.php">Decks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="store.php">Stores</a>
+        </li>
+       
+      
+        
       </ul>
     </div>
   </div>
