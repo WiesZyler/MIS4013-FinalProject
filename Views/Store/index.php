@@ -10,7 +10,7 @@ const grid = new gridjs.Grid({
   data: [
     <?php 
     while ($store = $stores->fetch_assoc()) {
-      echo "['" . $store['StoreID'] . "', '" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $store['SLon'] . "'],";
+      echo "['" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $store['SLon'] . "'],";
     }
     ?>
   ],
