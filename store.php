@@ -6,7 +6,7 @@ require_once("Models/store.php");
 $PageTitle = "Stores";
 include "Views/header.php";
 
-$packs = selectStore();
+$stores = selectStore();
 include "Views/Store/index.php";
 include "Views/footer.php";
 
