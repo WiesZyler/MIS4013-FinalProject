@@ -4,7 +4,7 @@
 <div id="tbl"></div>
 <script>
 const grid = new gridjs.Grid({
-  columns: ['Store ID', 'Store Name', 'Latitude, Longitude'],
+  columns: ['Store ID', 'Store Name', 'Latitude', 'Longitude',],
   sort: true,
   pagination: true,
   data: [
