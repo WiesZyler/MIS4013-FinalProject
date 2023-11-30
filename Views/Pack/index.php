@@ -6,7 +6,7 @@
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   sort: true,
-  pagination: {limit:5},
+  pagination: {limit:10},
   data: [
     <?php 
     while ($pack = $packs->fetch_assoc()) {
