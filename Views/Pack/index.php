@@ -5,7 +5,7 @@
 
 <div id="myModal" class="modal">
   <div class="modal-content" style="width: 400px; display: flex; flex-direction: column; align-items: center;">
-    <span>Pack Information</span>
+    <span style="font-size: 20px; font-weight: bold;">Pack Information</span>
     <br />
     <input type="hidden" name="pid" id="pid">
     <div class="input-group">
