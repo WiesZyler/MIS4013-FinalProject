@@ -16,11 +16,14 @@
       <label class="input-group-text">Release Date</label>
       <input type="date" id="rdate" class="form-control" />
     </div>
+    <form method="post" action="">
+    <input type="hidden" name="actionType" id="actionType" value="">
     <div class="btn-group" style="margin-top: 5px; width: 200px; display: flex; justify-content: center;">
       <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
       <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
-      <button class="btn btn-danger btn-sm" id="deletebtn">Delete</button>
+      <button class="btn btn-danger btn-sm" id="deletebtn" onclick="return confirm('Are You Sure?');>Delete</button>
     </div>
+    </form>
   </div>
 </div>
 
@@ -35,23 +38,25 @@
 var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
+var actionType = document.querySelector("#actiontype");
 
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
 				closeModal();
+				actionType.value = "Add";
 
 			})
 
 let editbtn = document.querySelector("#editbtn");
 			editbtn.addEventListener("click", async () => {
 				closeModal();
-
+                                actionType.value = "Edit";
 			})
 
 let deletebtn = document.querySelector("#deletebtn");
 			deletebtn.addEventListener("click", async () => {
 				closeModal();
-
+                                actionType.value = "Delete";
 			})
 
 	
