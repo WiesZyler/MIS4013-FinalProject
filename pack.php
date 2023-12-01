@@ -11,7 +11,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertPack($_POST['pid'],$_POST['pname'],$_POST['rdate']))
+      if (insertPack($_POST['pname'],$_POST['rdate']))
       {
        echo '<div class="alert alert-success" role="alert"> Pack Added! </div>';
          ?>
