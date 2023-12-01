@@ -13,11 +13,11 @@ function selectPack() {
     }
 }
 
-function insertPack($pid,$pname,$rdate) {
+function insertPack($pname,$rdate) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Pack` (`PackID`, `PName`, `PReleaseDate`) VALUES ( ?, ?, ?)");
-         $stmt->bind_param("sss",$pid,$pname,$rdate);
+        $stmt = $conn->prepare("INSERT INTO `Pack` (`PName`, `PReleaseDate`) VALUES (?, ?)");
+         $stmt->bind_param("ss",$pname,$rdate);
       $success =  $stmt->execute();
 
         $conn->close();
