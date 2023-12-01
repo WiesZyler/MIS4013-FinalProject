@@ -7,28 +7,24 @@
   <div class="modal-content" style="width:400px;">
    <span>Pack Information</span>
       <br />
-      <input type="hidden" name="pid" id="pid">
+           <input type="hidden" name="pid" id="pid">
       <div class="input-group">
-      <label class="input-group-text">Pack Name</label>
-      <input type="text" id="pname" class="form-control" />
+           <label class="input-group-text">Pack Name</label>
+           <input type="text" id="pname" class="form-control" />
       </div>
       <div class="input-group">
-      <label class="input-group-text">Release Date</label>
-      <input type="date" id="rdate" class="form-control" />
+           <label class="input-group-text">Release Date</label>
+           <input type="date" id="rdate" class="form-control" />
       </div>
       <div class="btn-group" style="margin-top:5px;">
-<button class="btn btn-primary btn-sm">Add</button>
-<button class="btn btn-warning btn-sm">Edit</button>
-	      <button class="btn btn-danger btn-sm">Delete</button>
-</div>
+           <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
+           <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
+	   <button class="btn btn-danger btn-sm" id="deletebtn">Delete</button>
+      </div>
   </div>
 </div>
 
-<script>
-			var pid = document.querySelector("#pid");
-			var pname = document.querySelector("#pname");
-			var prdate = document.querySelector("#rdate");
-</script>
+			
 
 
 
@@ -36,12 +32,38 @@
 
 <div id="tbl"></div>
 <script>
+var pid = document.querySelector("#pid");
+var pname = document.querySelector("#pname");
+var prdate = document.querySelector("#rdate");
+
+let addbtn = document.querySelector("#addbtn");
+			addbtn.addEventListener("click", async () => {
+				closeModal();
+
+			})
+
+let editbtn = document.querySelector("#editbtn");
+			addbtn.addEventListener("click", async () => {
+				closeModal();
+
+			})
+
+let deletebtn = document.querySelector("#deletebtn");
+			addbtn.addEventListener("click", async () => {
+				closeModal();
+
+			})
+
+	
 function openModal() {
-    const modal = document.getElementById('myModal');
-    const modalContent = document.getElementById('modalContent');
-    
+    const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
   }
+
+function closeModal() {
+  const modal = document.getElementById('myModal');
+  modal.style.display = 'none';
+}
 
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
