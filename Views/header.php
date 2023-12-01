@@ -28,6 +28,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
+    <!-- moment js for date -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+
+	<link href="https://juxinglong.github.io/static/MIS3033.css" rel="stylesheet" />
+
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
