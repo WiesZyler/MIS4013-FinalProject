@@ -82,8 +82,8 @@ grid.on("rowClick", (...args) => {
 				prdate.value = args[1]._cells[2].data;
 
   let d = args[1]._cells[2].data;
-				d = new Date(d);
-				prdate.value = moment(d).format("yyyy-MM-DD")
-  )
+d = new Date(d);
+prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
+});
 </script>
