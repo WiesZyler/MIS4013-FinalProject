@@ -52,12 +52,14 @@ let editbtn = document.querySelector("#editbtn");
 			editbtn.addEventListener("click", async () => {
 				closeModal();
                                 actionType.value = "Edit";
+				console.log(actionType.value);
 			})
 
 let deletebtn = document.querySelector("#deletebtn");
 			deletebtn.addEventListener("click", async () => {
 				closeModal();
                                 actionType.value = "Delete";
+				console.log(actionType.value);
 			})
 
 	
