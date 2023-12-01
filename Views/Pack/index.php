@@ -3,8 +3,8 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 
-<div id="myModal" class="modal" style="width:400px;">
-  <div class="modal-content">
+<div id="myModal" class="modal">
+  <div class="modal-content" style="width:400px;">
    <span>Pack Information</span>
 			<br />
       <input type="hidden" name="pid" id="pid">
