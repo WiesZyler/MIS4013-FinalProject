@@ -38,7 +38,7 @@
 var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
-var actionType = document.querySelector("#actiontype");
+var actionType = document.querySelector("#actionType");
 
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
