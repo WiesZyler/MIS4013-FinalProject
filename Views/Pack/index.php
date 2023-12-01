@@ -16,7 +16,7 @@
            <label class="input-group-text">Release Date</label>
            <input type="date" id="rdate" class="form-control" />
       </div>
-      <div class="btn-group" style="margin-top:5px;">
+      <div class="btn-group" style="margin-top:5px; width:200px;" >
            <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
            <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
 	   <button class="btn btn-danger btn-sm" id="deletebtn">Delete</button>
@@ -43,13 +43,13 @@ let addbtn = document.querySelector("#addbtn");
 			})
 
 let editbtn = document.querySelector("#editbtn");
-			addbtn.addEventListener("click", async () => {
+			editbtn.addEventListener("click", async () => {
 				closeModal();
 
 			})
 
 let deletebtn = document.querySelector("#deletebtn");
-			addbtn.addEventListener("click", async () => {
+			deletebtn.addEventListener("click", async () => {
 				closeModal();
 
 			})
