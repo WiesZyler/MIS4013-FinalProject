@@ -6,16 +6,21 @@
 <div id="myModal" class="modal">
   <div class="modal-content" style="width:400px;">
    <span>Pack Information</span>
-			<br />
+      <br />
       <input type="hidden" name="pid" id="pid">
-			<div class="input-group">
-				<label class="input-group-text">Pack Name</label>
-				<input type="text" id="pname" class="form-control" />
-			</div>
-			<div class="input-group">
-				<label class="input-group-text">Release Date</label>
-				<input type="date" id="rdate" class="form-control" />
-			</div>
+      <div class="input-group">
+      <label class="input-group-text">Pack Name</label>
+      <input type="text" id="pname" class="form-control" />
+      </div>
+      <div class="input-group">
+      <label class="input-group-text">Release Date</label>
+      <input type="date" id="rdate" class="form-control" />
+      </div>
+      <div class="btn-group" style="margin-top:5px;">
+<button class="btn btn-primary btn-sm">Add</button>
+<button class="btn btn-warning btn-sm">Edit</button>
+	      <button class="btn btn-danger btn-sm">Delete</button>
+</div>
   </div>
 </div>
 
