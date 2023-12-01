@@ -7,6 +7,7 @@
   <div class="modal-content" style="width: 400px; display: flex; flex-direction: column; align-items: center;">
     <span style="font-size: 20px; font-weight: bold;">Pack Information</span>
     <br />
+    <form method="post" action="">
     <input type="hidden" name="pid" id="pid">
     <div class="input-group">
       <label class="input-group-text">Pack Name</label>
@@ -16,7 +17,7 @@
       <label class="input-group-text">Release Date</label>
       <input type="date" id="rdate" class="form-control" />
     </div>
-    <form method="post" action="">
+    
     <input type="hidden" name="actionType" id="actionType" value="">
     <div class="btn-group" style="margin-top: 5px; width: 200px; display: flex; justify-content: center;">
       <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
