@@ -44,6 +44,7 @@ let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
 				closeModal();
 				actionType.value = "Add";
+				console.log(actionType.value);
 
 			})
 
