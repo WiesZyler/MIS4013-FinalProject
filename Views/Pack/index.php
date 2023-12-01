@@ -11,11 +11,11 @@
     <input type="hidden" name="pid" id="pid">
     <div class="input-group">
       <label class="input-group-text">Pack Name</label>
-      <input type="text" id="pname" class="form-control" />
+      <input type="text" id="pname" name="pname" class="form-control" />
     </div>
     <div class="input-group">
       <label class="input-group-text">Release Date</label>
-      <input type="date" id="rdate" class="form-control" />
+      <input type="date" id="rdate" name="rdate" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
