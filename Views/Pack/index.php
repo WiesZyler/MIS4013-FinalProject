@@ -81,9 +81,8 @@ grid.on("rowClick", (...args) => {
 				pname.value = args[1]._cells[1].data;
 				prdate.value = args[1]._cells[2].data;
 
-  let d = args[1]._cells[2].data;
-d = new Date(d);
-prdate.value = moment(d).format("yyyy-MM-DD")
+ const d = new Date(row.cells[2].data);
+  prdate.value = d.toISOString().split('T')[0];
   openModal();
 });
 </script>
