@@ -40,4 +40,12 @@ const grid = new gridjs.Grid({
   }
 });
   grid.render(tbl);
+
+  grid.on('rowClick', (row, index) => {
+ <?php
+include "edit-form.php"
+?>
+
+    
+  }
 </script>
