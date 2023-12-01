@@ -16,7 +16,7 @@
            <label class="input-group-text">Release Date</label>
            <input type="date" id="rdate" class="form-control" />
       </div>
-      <div class="btn-group" style="margin-top:5px; width:200px;" >
+      <div class="btn-group" style="margin-top:5px; width:200px; display:flex; flex-direction:row; align-items:center; justify-content:center;" >
            <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
            <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
 	   <button class="btn btn-danger btn-sm" id="deletebtn">Delete</button>
