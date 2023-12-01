@@ -5,11 +5,25 @@
 
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <!-- Content to display in the modal -->
-    <p id="modalContent"></p>
+   <span>Pack Information</span>
+			<br />
+      <input type="hidden" name="pid" id="pid">
+			<div class="input-group">
+				<label class="input-group-text">Pack Name</label>
+				<input type="text" id="pname" class="form-control" />
+			</div>
+			<div class="input-group">
+				<label class="input-group-text">Release Date</label>
+				<input type="date" id="rdate" class="form-control" />
+			</div>
   </div>
 </div>
+
+<script>
+			var pid = document.querySelector("#pid");
+			var pname = document.querySelector("#pname");
+			var prdate = document.querySelector("#rdate");
+</script>
 
 
 
@@ -17,12 +31,11 @@
 
 <div id="tbl"></div>
 <script>
-function openModal(content) {
+function openModal() {
     const modal = document.getElementById('myModal');
     const modalContent = document.getElementById('modalContent');
     
     modal.style.display = 'block';
-    modalContent.innerHTML = content;
   }
 
 const grid = new gridjs.Grid({
@@ -63,33 +76,14 @@ const grid = new gridjs.Grid({
 });
   grid.render(tbl);
 
- grid.on('rowClick', (row, index) => {
-    const rowData = row.cells.map(cell => cell.data);
+grid.on("rowClick", (...args) => {
+				pid.value = args[1]._cells[0].data;
+				pname.value = args[1]._cells[1].data;
+				prdate.value = args[1]._cells[2].data;
 
-    // You can modify this to create any HTML content you want to display in the modal
-    const content = `
-      <h2>Row Clicked</h2>
-      <p><strong>Pack ID:</strong> ${rowData[0]}</p>
-      <p><strong>Pack Name:</strong> ${rowData[1]}</p>
-      <p><strong>Release Date:</strong> ${rowData[2]}</p>
-    `;
-
-    // Open the modal with the generated content
-    openModal(content);
-  });
-
-  // Close the modal when the close button is clicked
-  const closeBtn = document.getElementsByClassName('close')[0];
-  closeBtn.onclick = function() {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'none';
-  }
-
-  // Close the modal when clicking outside the modal content
-  window.onclick = function(event) {
-    const modal = document.getElementById('myModal');
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  }
+  let d = args[1]._cells[2].data;
+				d = new Date(d);
+				prdate.value = moment(d).format("yyyy-MM-DD")
+  )
+  openModal();
 </script>
