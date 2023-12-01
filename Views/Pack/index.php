@@ -3,6 +3,8 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 
+
+<!-- Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content" style="width: 400px; display: flex; flex-direction: column; align-items: center;">  	  
    <button id="closeModalBtn" class="btn btn-sm" style="position: absolute; top: 5px; right: 5px;">
@@ -33,19 +35,19 @@
   </div>
 </div>
 
-			
-
-
-
-
-
+<!-- Table -->
 <div id="tbl"></div>
+
+
+<!-- Javascript -->
 <script>
+// assigning variables
 var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
 
+// event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
 				closeModal();
@@ -70,7 +72,7 @@ let deletebtn = document.querySelector("#deletebtn");
 let closeModalBtn = document.querySelector("#closeModalBtn");
 closeModalBtn.addEventListener('click',async () => {closeModal();});
 
-	
+// functions to show and hide modal	
 function openModal() {
     const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
@@ -81,18 +83,19 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
+// Table creation
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   sort: true,
   pagination: {limit:10},
   data: [
-    <?php 
+    <?php // PHP loop to collect data from database
     while ($pack = $packs->fetch_assoc()) {
       echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
     }
     ?>
   ],
-  style: {
+  style: { // styles for table?
     grid: {
       'background-color': '#1e1e1e',
       color: '#ddd',
@@ -117,15 +120,16 @@ const grid = new gridjs.Grid({
     },
   }
 });
-  grid.render(tbl);
+  grid.render(tbl); // display the table in its container div
 
-grid.on("rowClick", (...args) => {
+// detect clicks on table rows to open modal and and autofill information
+grid.on("rowClick", (...args) => { 
 				pid.value = args[1]._cells[0].data;
 				pname.value = args[1]._cells[1].data;
 				prdate.value = args[1]._cells[2].data;
 
   let d = args[1]._cells[2].data;
-d = new Date(d);
+d = new Date(d); // convert date format
 prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
 });
