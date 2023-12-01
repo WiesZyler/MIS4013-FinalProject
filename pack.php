@@ -13,7 +13,6 @@ if (isset($_POST['actionType']))
       case  "Add":
       if (insertPack($_POST['pname'],$_POST['rdate']))
       {
-       echo '<div class="alert alert-success" role="alert"> Pack Added! </div>';
          ?>
        <script>
          Swal.fire({title: "Success", text: "Pack Added!", icon: "success",});
@@ -22,7 +21,6 @@ if (isset($_POST['actionType']))
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Added! </div>';
          ?>
        <script>
          Swal.fire({title: "Error", text: "Pack Not Added!", icon: "error",});
@@ -33,7 +31,6 @@ if (isset($_POST['actionType']))
       case  "Delete":
       if (deletePack($_POST['pid']))
       {
-       echo '<div class="alert alert-success" role="alert"> Pack Deleted</div>';
          ?>
        <script>
          Swal.fire({title: "Success", text: "Pack Deleted!", icon: "success",});
@@ -42,7 +39,6 @@ if (isset($_POST['actionType']))
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Deleted! </div>';
         ?>
        <script>
          Swal.fire({title: "Error", text: "Pack Not Deleted!", icon: "error",});
@@ -53,7 +49,6 @@ if (isset($_POST['actionType']))
        case  "Edit":
       if (editPack($_POST['pname'],$_POST['rdate'],$_POST['pid']))
       {
-       echo '<div class="alert alert-success" role="alert"> Pack Edited! </div>';
         ?>
        <script>
          Swal.fire({title: "Success", text: "Pack Edited!", icon: "success",});
@@ -62,7 +57,6 @@ if (isset($_POST['actionType']))
           }
       else
       {
-        echo '<div class="alert alert-danger" role="alert"> Error! Pack Not Edited! </div>';
          ?>
        <script>
          Swal.fire({title: "Error", text: "Pack Not Edited!", icon: "error",});
