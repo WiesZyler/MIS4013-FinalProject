@@ -76,11 +76,9 @@ const grid = new gridjs.Grid({
 });
   grid.render(tbl);
 
-grid.on("rowClick", (...args) => {
-				pid.value = args[1]._cells[0].data;
-				pname.value = args[1]._cells[1].data;
-				prdate.value = args[1]._cells[2].data;
-
+grid.on("rowClick", (row, index) => {
+  pid.value = row.cells[0].data;
+  pname.value = row.cells[1].data;
  const d = new Date(row.cells[2].data);
   prdate.value = d.toISOString().split('T')[0];
   openModal();
