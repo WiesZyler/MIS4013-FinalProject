@@ -13,11 +13,11 @@ function selectStore() {
     }
 }
 
-function insertStore($sname,$lon,$slat) {
+function insertStore($sname,$slon,$slat) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Store` (`SName`, `SLon`, `SLat`) VALUES (?, ?, ?)");
-         $stmt->bind_param("sss",$sname,$lon,$slat);
+         $stmt->bind_param("sss",$sname,$slon,$slat);
       $success =  $stmt->execute();
 
         $conn->close();
@@ -47,7 +47,7 @@ function editStore($sname,$slon,$slat,$sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Store` SET `SName`=?, `SLon`=?, `SLat`=? WHERE `StoreID`=?");
-         $stmt->bind_param("ssss",$sname,$lon,$slat,$sid);
+         $stmt->bind_param("ssss",$sname,$slon,$slat,$sid);
       $success =  $stmt->execute();
 
         $conn->close();
