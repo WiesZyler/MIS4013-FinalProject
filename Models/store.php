@@ -43,7 +43,7 @@ function deleteStore($sid) {
     }
 }
 
-function editStore($sname,$lon,$slat,$sid) {
+function editStore($sname,$slon,$slat,$sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Store` SET `SName`=?, `SLon`=?, `SLat`=? WHERE `StoreID`=?");
