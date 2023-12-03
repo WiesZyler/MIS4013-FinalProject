@@ -93,7 +93,7 @@ closeModalBtn.addEventListener('click',async () => {closeModal();});
 function openModal() {
     const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
-    var map = L.map('mapdiv', { attributionControl: false, }).setView([64.74220870198666, -102.78883159160615], 12);
+    var map = L.map('mapdiv', { attributionControl: false, }).setView([slat.value, slon.value], 12);
     map.on("click",(e)=>{
 				g = e;
 				let lati=e.latlng.lat;
@@ -120,6 +120,7 @@ function openModal() {
 				if (marker != null) {
 					map.removeLayer(marker);
 					marker = null;
+					marker.bindPopup("")
 				}
 	marker = L.marker([slat.value, slon.value]);
 			
