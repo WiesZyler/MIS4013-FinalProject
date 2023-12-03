@@ -102,7 +102,7 @@ function openModal() {
 
     // Update the map view and marker if latitude and longitude values exist
     if (slat.value && slon.value) {
-        map.setView([parseFloat(slat.value), parseFloat(slon.value)], 4);
+        map.setView([parseFloat(slat.value), parseFloat(slon.value)], 16);
 
         if (marker !== null) {
             map.removeLayer(marker);
