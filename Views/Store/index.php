@@ -22,12 +22,12 @@
     </div>
     <div class="input-group">
       <label class="input-group-text">Latitude</label>
-      <input type="date" id="slat" name="slat" class="form-control" />
+      <input type="text" id="slat" name="slat" class="form-control" />
     </div>
 
      <div class="input-group">
       <label class="input-group-text">Longitude</label>
-      <input type="date" id="slon" name="slon" class="form-control" />
+      <input type="text" id="slon" name="slon" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
