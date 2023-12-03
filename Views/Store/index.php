@@ -13,20 +13,20 @@
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
       </svg>
     </button>
-    <span style="font-size: 20px; font-weight: bold;"></p>Pack Information</span>
+    <span style="font-size: 20px; font-weight: bold;"></p>Store Information</span>
     <form method="post" action="">
     <input type="hidden" name="sid" id="sid">
     <div class="input-group">
-      <label class="input-group-text">Pack Name</label>
+      <label class="input-group-text">Store Name</label>
       <input type="text" id="sname" name="sname" class="form-control" />
     </div>
     <div class="input-group">
-      <label class="input-group-text">Release Date</label>
+      <label class="input-group-text">Latitude</label>
       <input type="date" id="slat" name="slat" class="form-control" />
     </div>
 
      <div class="input-group">
-      <label class="input-group-text">Release Date</label>
+      <label class="input-group-text">Longitude</label>
       <input type="date" id="slon" name="slon" class="form-control" />
     </div>
     
@@ -130,13 +130,11 @@ const grid = new gridjs.Grid({
 
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
-				pid.value = args[1]._cells[0].data;
-				pname.value = args[1]._cells[1].data;
-				prdate.value = args[1]._cells[2].data;
+				sid.value = args[1]._cells[0].data;
+				sname.value = args[1]._cells[1].data;
+				slat.value = args[1]._cells[2].data;
+	                        slon.value = args[1]._cells[3].data;
 
-  let d = args[1]._cells[2].data;
-d = new Date(d); // convert date format
-prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
 });
 </script>
