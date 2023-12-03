@@ -47,7 +47,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editStore($_POST['sname'],$_POST['slon'],$_POST['slat']))
+      if (editStore($_POST['sname'],$_POST['slon'],$_POST['slat'],$_POST['sid']))
       {
         ?>
        <script>
