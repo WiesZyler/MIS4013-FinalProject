@@ -53,7 +53,6 @@
 <!-- Javascript -->
 <script>
 // assigning variables
-var g;
 var sid = document.querySelector("#sid");
 var sname = document.querySelector("#sname");
 var slat = document.querySelector("#slat");
@@ -93,8 +92,17 @@ closeModalBtn.addEventListener('click',async () => {closeModal();});
 function openModal() {
     const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
-    var map = L.map('mapdiv', { attributionControl: false, }).setView([slat.value, slon.value], 12);
-    map.on("click",(e)=>{
+  }
+
+function closeModal() {
+  const modal = document.getElementById('myModal');
+  modal.style.display = 'none';
+}
+
+
+
+var map = L.map('mapdiv', { attributionControl: false, }).setView([slat.value, slon.value], 12);
+map.on("click",(e)=>{
 				g = e;
 				let lati=e.latlng.lat;
 				let longi=e.latlng.lng;
@@ -120,7 +128,6 @@ function openModal() {
 				if (marker != null) {
 					map.removeLayer(marker);
 					marker = null;
-					marker.bindPopup("")
 				}
 	marker = L.marker([slat.value, slon.value]);
 			
@@ -135,22 +142,6 @@ function openModal() {
 					subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 				});
 				tile.addTo(map);
-
-  }
-
-function closeModal() {
-  const modal = document.getElementById('myModal');
-  modal.style.display = 'none';
-  if (marker != null) {
-   map.removeLayer(marker);
-   marker = null;
-   }
-  mapdiv.innerHTML = "";
-
-}
-
-
-
 
 
 	
