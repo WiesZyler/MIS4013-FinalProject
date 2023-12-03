@@ -91,13 +91,13 @@ function closeModal() {
 
 // Table creation
 const grid = new gridjs.Grid({
-  columns: ['Store Name', 'Latitude', 'Longitude'],
+  columns: ['Store ID','Store Name', 'Latitude', 'Longitude'],
   sort: true,
   pagination: {limit:10},
   data: [
     <?php // PHP loop to collect data from database
     while ($store = $stores->fetch_assoc()) {
-      echo "['" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $store['SLon'] . "'],";
+      echo "['" . $store['StoreID'] . "','" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $store['SLon'] . "'],";
     }
     ?>
   ],
