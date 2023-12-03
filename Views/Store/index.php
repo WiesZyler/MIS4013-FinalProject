@@ -92,58 +92,55 @@ closeModalBtn.addEventListener('click',async () => {closeModal();});
 function openModal() {
     const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
+    if (!mapInitialized) {
+        map = initializeMap();
+        mapInitialized = true;
+    }
+
+    // Update the map view and marker if latitude and longitude values exist
+    if (slat.value && slon.value) {
+        map.setView([parseFloat(slat.value), parseFloat(slon.value)], 12);
+
+        if (marker !== null) {
+            map.removeLayer(marker);
+        }
+
+        marker = L.marker([parseFloat(slat.value), parseFloat(slon.value)]).addTo(map);
+        marker.bindPopup(sname.value).openPopup();
+    }
   }
 
 function closeModal() {
   const modal = document.getElementById('myModal');
   modal.style.display = 'none';
 }
+function initializeMap() {
+    // Create a new map within the mapdiv element inside the modal
+    var map = L.map('mapdiv', {
+        attributionControl: false,
+    }).setView([35, 97], 12);
 
+    // Add a tile layer (replace with your desired tile layer)
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    }).addTo(map);
 
+    // Event listener for map click to update marker and inputs
+    map.on("click", function (e) {
+        slat.value = e.latlng.lat;
+        slon.value = e.latlng.lng;
 
-var map = L.map('mapdiv', { attributionControl: false, }).setView([slat.value, slon.value], 12);
-map.on("click",(e)=>{
-				g = e;
-				let lati=e.latlng.lat;
-				let longi=e.latlng.lng;
+        if (marker !== null) {
+            map.removeLayer(marker);
+        }
 
-					slat.value = lati;
-					slon.value = longi;
-					if (marker != null) {
-						map.removeLayer(marker);
-						marker = null;
-					}
+        marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+        marker.bindPopup(sname.value).openPopup();
+    });
 
-					marker = L.marker([lati, longi]);
-					map.setView([lati, longi], 12);
-
-					marker.bindPopup(sname.value);
-
-					marker.addTo(map);
-					marker.openPopup();
-
-					
-				})
-
-				if (marker != null) {
-					map.removeLayer(marker);
-					marker = null;
-				}
-	marker = L.marker([slat.value, slon.value]);
-			
-
-				marker.bindPopup(sname.value);
-	
-				marker.addTo(map);
-				marker.openPopup();
-
-				let tile = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-					maxZoom: 20,
-					subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-				});
-				tile.addTo(map);
-
-
+    return map;
+}
 	
 // Table creation
 const grid = new gridjs.Grid({
