@@ -47,7 +47,7 @@ function editStore($sname,$slon,$slat,$sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Store` SET `SName`=?, `SLon`=?, `SLat`=? WHERE `StoreID`=?");
-         $stmt->bind_param("ssss",$sid,$sname,$lon,$slat);
+         $stmt->bind_param("ssss",$sname,$lon,$slat,$sid);
       $success =  $stmt->execute();
 
         $conn->close();
