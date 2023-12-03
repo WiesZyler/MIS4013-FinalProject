@@ -101,7 +101,7 @@ function closeModal() {
 
 
 
-var map = L.map('mapdiv', { attributionControl: false, }).setView([slat.value, slon.value], 12);
+var map = L.map('mapdiv', { attributionControl: false, }).setView([64.74220870198666, -102.78883159160615], 12);
 map.on("click",(e)=>{
 				g = e;
 				let lati=e.latlng.lat;
