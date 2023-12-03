@@ -59,7 +59,10 @@ var slat = document.querySelector("#slat");
 var slon = document.querySelector("#slon");
 var actionType = document.querySelector("#actionType");
 
-var marker = null
+var mapInitialized = false;
+var map = null;
+var marker = null;
+var marker = null;
 let mapdiv = document.querySelector("#mapdiv")
 mapdiv.innerHTML = "";
 
