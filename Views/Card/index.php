@@ -9,9 +9,9 @@ const grid = new gridjs.Grid({
   pagination: true,
   data: [
     <?php 
-    while ($card = $cards->fetch_assoc()) {
-      echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "'],'" . $card['CRarity'] . "'],";
-    }
+  while ($card = $cards->fetch_assoc()) {
+    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "'],";
+}
     ?>
   ],
   style: {
