@@ -130,6 +130,10 @@ const grid = new gridjs.Grid({
 
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
+	console.log(args);
+console.log(args[1]);
+console.log(args[1]._cells);
+console.log(args[1]._cells[3]);
 				sid.value = args[1]._cells[0].data;
 				sname.value = args[1]._cells[1].data;
 				slat.value = args[1]._cells[2].data;
