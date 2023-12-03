@@ -6,8 +6,8 @@
 
 <!-- Modal -->
 <div id="myModal" class="modal">
-  <div class="modal-content" style="width: 1000px; display: flex; flex-direction: row; align-items: center;"> 
-	<div>
+  <div class="modal-content" style="width: 1000px; display: flex; flex-direction: column; align-items: center;"> 
+	<div style="display: flex; flex-direction: row;">
 		<div style="display: flex; flex-direction: column;">
 			<button id="closeModalBtn" class="btn btn-sm" style="position: absolute; top: 5px; right: 5px;">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
