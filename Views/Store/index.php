@@ -97,7 +97,7 @@ const grid = new gridjs.Grid({
   data: [
     <?php // PHP loop to collect data from database
     while ($store = $stores->fetch_assoc()) {
-      echo "['" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $pack['SLon'] . "'],";
+      echo "['" . $store['SName'] . "', '" . $store['SLat'] . "', '" . $store['SLon'] . "'],";
     }
     ?>
   ],
