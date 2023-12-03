@@ -93,17 +93,8 @@ closeModalBtn.addEventListener('click',async () => {closeModal();});
 function openModal() {
     const modal = document.getElementById('myModal');  
     modal.style.display = 'block';
-  }
-
-function closeModal() {
-  const modal = document.getElementById('myModal');
-  modal.style.display = 'none';
-}
-
-
-
-var map = L.map('mapdiv', { attributionControl: false, }).setView([64.74220870198666, -102.78883159160615], 12);
-map.on("click",(e)=>{
+    var map = L.map('mapdiv', { attributionControl: false, }).setView([64.74220870198666, -102.78883159160615], 12);
+    map.on("click",(e)=>{
 				g = e;
 				let lati=e.latlng.lat;
 				let longi=e.latlng.lng;
@@ -143,6 +134,22 @@ map.on("click",(e)=>{
 					subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 				});
 				tile.addTo(map);
+
+  }
+
+function closeModal() {
+  const modal = document.getElementById('myModal');
+  modal.style.display = 'none';
+  if (marker != null) {
+   map.removeLayer(marker);
+   marker = null;
+   }
+  mapdiv.innerHTML = "";
+
+}
+
+
+
 
 
 	
