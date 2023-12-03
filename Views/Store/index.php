@@ -53,6 +53,7 @@
 <!-- Javascript -->
 <script>
 // assigning variables
+var g;
 var sid = document.querySelector("#sid");
 var sname = document.querySelector("#sname");
 var slat = document.querySelector("#slat");
