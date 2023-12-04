@@ -45,7 +45,7 @@ function deleteCard($cid) {
     }
 }
 
-function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid) {
+function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid,$pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Card` SET `CName`=?, `CColorID`=?, `CCardType`=?, `CRarity`=?, `PackID`=? WHERE `CardID`=?");
