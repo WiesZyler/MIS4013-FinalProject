@@ -72,7 +72,7 @@ externalAddBtn.addEventListener("click", async () => {
     dformat.value = '';
     dplayername.value = '';
 
-    openModal();
+  	CloseModal();
 
 
 	
