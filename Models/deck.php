@@ -45,7 +45,7 @@ function deleteDeck($did) {
     }
 }
 
-function editDeck($deckName,$dFormat,$dPlayerName,$did) {
+function editDeck($deckName,$dformat,$dplayerName,$did) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Deck` SET `DName`=?, `DFormat`=?,`DPlayerName`=?  WHERE `DeckID`=?");
