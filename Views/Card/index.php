@@ -25,7 +25,7 @@
     </div>
       <div class="input-group">
       <label class="input-group-text">Card Type</label>
-      <input type="text" id="ctype" name="ctype" class="form-control" />
+      <input type="text" id="ccardtype" name="ccardtype" class="form-control" />
     </div>
       <div class="input-group">
       <label class="input-group-text">Card Rarity</label>
