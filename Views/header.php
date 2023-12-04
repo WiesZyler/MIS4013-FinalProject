@@ -2,6 +2,11 @@
 <html lang="en" >
   <head>
 
+<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+	  
+
+	  
 
 	<link rel="stylesheet" href="style/bootstrap.css">
 	  
@@ -44,6 +49,22 @@
     <title> <?=$PageTitle?> </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
+
+
+.gridjs th {
+      background-color: #333; /* Change the background color */
+      color: #fff; /* Change the font color */
+      font-size: 16px; /* Change the font size */
+    }
+
+    /* Override table cell styles */
+    .gridjs td {
+
+
+	    
+
+
+	    
   .modal {
     display: none;
     position: fixed;
