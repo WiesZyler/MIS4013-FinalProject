@@ -35,7 +35,7 @@ function deleteDeck($did) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("Delete from `Deck` where DeckID=?");
-         $stmt->bind_param("i", $did);
+         $stmt->bind_param("s", $did);
       $success =  $stmt->execute();
         $conn->close();
         return $success;
@@ -45,11 +45,11 @@ function deleteDeck($did) {
     }
 }
 
-function editDeck($deckName,$dformat,$dplayerName,$did) {
+function editDeck($dname,$dformat,$dplayername,$did) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Deck` SET `DName`=?, `DFormat`=?,`DPlayerName`=?  WHERE `DeckID`=?");
-        $stmt->bind_param("sssi",$dname,$dformat,$dplayername,$did);  
+        $stmt->bind_param("ssss",$dname,$dformat,$dplayername,$did);  
         $success = $stmt->execute();  
         $conn->close();
         return $success;
