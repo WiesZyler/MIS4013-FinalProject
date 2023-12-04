@@ -82,13 +82,7 @@ externalAddBtn.addEventListener("click", async () => {
 
 	
 // event listeners for modal buttons
-let addbtn = document.querySelector("#addbtn");
-			addbtn.addEventListener("click", async () => {
-				CloseModal();
-				actionType.value = "Add";
-				console.log(actionType.value);
 
-			})
 
 let editbtn = document.querySelector("#editbtn");
 			editbtn.addEventListener("click", async () => {
