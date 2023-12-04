@@ -3,7 +3,7 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
-
+<button id="externalAddBtn" class="btn btn-primary">Add Deck</button>
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -57,6 +57,20 @@ var dformat = document.querySelector("#dformat");
 var dplayername = document.querySelector("#dplayername");
 var actionType = document.querySelector("#actionType");
 
+
+
+
+
+let externalAddBtn = document.querySelector("#externalAddBtn");
+externalAddBtn.addEventListener("click", () => {
+    // Trigger the modal opening function when clicking the external add button
+    actionType.value = "Add";
+    openModal();
+});
+
+
+
+	
 // event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
