@@ -15,7 +15,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertCard($_POST['cname'],$_POST['ccolorid'],$_POST['ccardtype'],$_POST['crarity']))
+      if (insertCard($_POST['cname'],$_POST['ccolorid'],$_POST['ccardtype'],$_POST['crarity'],$_POST['pid']))
       {
          ?>
        <script>
@@ -51,7 +51,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editCard($_POST['cname'],$_POST['ccolorid'],$_POST['ccardtype'],$_POST['crarity'],$_POST['cid']))
+      if (editCard($_POST['cname'],$_POST['ccolorid'],$_POST['ccardtype'],$_POST['crarity'],$_POST['cid'],$_POST['pid']))
       {
         ?>
        <script>
