@@ -34,7 +34,7 @@
                         <div class="btn-group" style="margin-top: 5px; width: 200px; display: flex; justify-content: center;">
                              <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
                              <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
-                             <button class="btn btn-danger btn-sm" id="deletebtn" onclick="return confirm('Are You Sure?');">Delete</button>
+                             <button class="btn btn-danger btn-sm" id="deletebtn">Delete</button>
                        </div>
                        </form>
 		</div>
@@ -85,8 +85,22 @@ let editbtn = document.querySelector("#editbtn");
 let deletebtn = document.querySelector("#deletebtn");
 			deletebtn.addEventListener("click", async () => {
 				closeModal();
-                                actionType.value = "Delete";
-				console.log(actionType.value);
+				Swal.fire({
+                                    title: "Are you sure?",
+                                    text: "You won't be able to revert this!",
+                                    icon: "warning",
+                                    showCancelButton: true,
+                                    confirmButtonColor: "#3085d6",
+                                    cancelButtonColor: "#d33",
+                                    confirmButtonText: "Yes, delete it!"
+                                     }).then((result) => {
+                                    if (result.isConfirmed) {
+                                     actionType.value = "Delete";
+				     console.log(actionType.value);
+				    });
+  }
+});
+                               
 			})
 let closeModalBtn = document.querySelector("#closeModalBtn");
 closeModalBtn.addEventListener('click',async () => {closeModal();});
