@@ -17,11 +17,11 @@ function selectDeck() {
 
 
  <?php
-function insertDeck($dName,$dFormat,$dPlayerName) {
+function insertDeck($dname,$dformat,$dplayername) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Deck` (`dName`, `dFormat`,`dPlayerName`) VALUES (?, ?,?)");
-         $stmt->bind_param("sss",$dName,$dFormat,$dplayerName);
+        $stmt = $conn->prepare("INSERT INTO `Deck` (`DName`, `DFormat`,`DPlayerName`) VALUES (?, ?,?)");
+         $stmt->bind_param("sss",$dname,$dformat,$dplayername);
       $success =  $stmt->execute();
         $conn->close();
         return $success;
@@ -45,11 +45,11 @@ function deleteDeck($did) {
     }
 }
 
-function editDeck($deckName,$dFormat,$dPlayerName,$dID) {
+function editDeck($deckName,$dFormat,$dPlayerName,$did) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `Deck` SET `dName`=?, `dFormat`=?,`dPlayerName`=?  WHERE `DeckID`=?");
-        $stmt->bind_param("sssi",$dName,$dFormat,dPlayerName,$did);  
+        $stmt = $conn->prepare("UPDATE `Deck` SET `DName`=?, `DFormat`=?,`DPlayerName`=?  WHERE `DeckID`=?");
+        $stmt->bind_param("sssi",$dname,$dformat,dplayername,$did);  
         $success = $stmt->execute();  
         $conn->close();
         return $success;
