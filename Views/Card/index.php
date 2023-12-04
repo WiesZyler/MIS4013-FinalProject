@@ -32,6 +32,10 @@
       <label class="input-group-text">Card Rarity</label>
       <input type="text" id="crarity" name="crarity" class="form-control" />
     </div>
+    <div class="input-group">
+      <label class="input-group-text">Pack ID</label>
+      <input type="text" id="pid" name="pid" class="form-control" />
+    </div>
     
     
     <input type="hidden" name="actionType" id="actionType" value="">
@@ -59,6 +63,7 @@ var cname = document.querySelector("#cname");
 var ccolorid = document.querySelector("#ccolorid");
 var ccardtype = document.querySelector("#ccardtype");
 var crarity = document.querySelector("#crarity");
+var crarity = document.querySelector("#pid");
 var actionType = document.querySelector("#actionType");
 
 
@@ -124,13 +129,13 @@ function closeModal() {
 
 
 const grid = new gridjs.Grid({
-  columns: ['Card ID', 'Card Name', 'Card Color', 'Card Type', 'Card Rarity'],
+  columns: ['Card ID', 'Card Name', 'Card Color', 'Card Type', 'Card Rarity', 'Pack ID'],
   sort: true,
   pagination: true,
   data: [
     <?php 
   while ($card = $cards->fetch_assoc()) {
-    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "'],";
+    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "', '" . $card['PackID'] . "'],";
 }
     ?>
   ],
