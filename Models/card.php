@@ -15,7 +15,7 @@ function selectCard() {
 }
 
 
-function insertCard($cname,$ccolorid,ccardtype,crarity) {
+function insertCard($cname,$ccolorid,$ccardtype,$crarity) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Card` (`CName`, `CColorID`, `CCardType`, `CRarity`) VALUES (?, ?,?,?)");
@@ -45,7 +45,7 @@ function deleteCard($cid) {
     }
 }
 
-function editCard($cname,$ccolorid,ccardtype,crarity,$cid) {
+function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Card` SET `CName`=?, `CColorID`=?, `CCardType`=?, `CRarity`=? WHERE `CardID`=?");
