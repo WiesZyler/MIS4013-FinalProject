@@ -65,9 +65,9 @@ var actionType = document.querySelector("#actionType");
 
 let externalAddBtn = document.querySelector("#externalAddBtn");
 externalAddBtn.addEventListener("click", async () => {
-
-    actionType.value = "Add";
-	console.log(actionType.value);
+CloseModal();
+  actionType.value = "Add";
+console.log(actionType.value);
 
 
 	dname.value = '';
