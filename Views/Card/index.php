@@ -2,6 +2,7 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+<button id="externalAddBtn" class="btn btn-primary">Add Card</button>
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -60,7 +61,31 @@ var ccardtype = document.querySelector("#ccardtype");
 var crarity = document.querySelector("#crarity");
 var actionType = document.querySelector("#actionType");
 
+
+
+
+
+
+
+
+	
 // event listeners for modal buttons
+
+	
+// event listeners for modal buttons
+let externalAddBtn = document.querySelector("#externalAddBtn");
+externalAddBtn.addEventListener("click", async () => {
+  actionType.value = "Add";
+console.log(actionType.value);
+
+
+
+  	openModal();
+
+	
+})
+
+	
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
 				closeModal();
