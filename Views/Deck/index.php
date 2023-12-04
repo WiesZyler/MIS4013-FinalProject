@@ -2,7 +2,7 @@
   <!-- Data table -->
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-
+  <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
 
 
 <!-- Modal -->
@@ -36,7 +36,7 @@
     
     <input type="hidden" name="actionType" id="actionType" value="">
     <div class="btn-group" style="margin-top: 5px; width: 200px; display: flex; justify-content: center;">
-      <button class="btn btn-primary btn-sm" id="addbtn">Add</button>
+    
       <button class="btn btn-warning btn-sm" id="editbtn">Edit</button>
       <button class="btn btn-danger btn-sm" id="deletebtn" onclick="return confirm('Are You Sure?');">Delete</button>
     </div>
