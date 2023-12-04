@@ -83,6 +83,23 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+
+	.gridjs-footer {
+    background-color: #1a0933;
+    border-style:solid;
+    border-bottom-width: 5px;
+    border-color: #dcdddf;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgb(167 0 0 / 10%),0 1px 2px 0 rgba(0,0,0,.26);
+    display: block;
+    padding: 12px 24px;
+    position: relative;
+    width: 100%;
+    z-index: 5
+}
+
 </style>
   </head>
   <body>
