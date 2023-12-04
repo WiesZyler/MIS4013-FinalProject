@@ -102,7 +102,7 @@ deletebtn.addEventListener("click", async () => {
                            });
 
                                
-			})
+			
 let closeModalBtn = document.querySelector("#closeModalBtn");
 closeModalBtn.addEventListener('click',async () => {closeModal();});
 
