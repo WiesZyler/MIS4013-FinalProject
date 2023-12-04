@@ -3,7 +3,7 @@
 function selectCard() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT CardID, CName, CColorID, CCardType, CRarity FROM `Card`");
+        $stmt = $conn->prepare("SELECT CardID, CName, CColorID, CCardType, CRarity, PackID FROM `Card`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -15,11 +15,11 @@ function selectCard() {
 }
 
 
-function insertCard($cname,$ccolorid,$ccardtype,$crarity) {
+function insertCard($cname,$ccolorid,$ccardtype,$crarity,$pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Card` (`CName`, `CColorID`, `CCardType`, `CRarity`) VALUES (?, ?,?,?)");
-         $stmt->bind_param("siss",$cname,$ccolorid,$ccardtype,$crarity);
+        $stmt = $conn->prepare("INSERT INTO `Card` (`CName`, `CColorID`, `CCardType`, `CRarity`, `PackID`) VALUES (?, ?,?,?)");
+         $stmt->bind_param("sissi",$cname,$ccolorid,$ccardtype,$crarity,$pid);
       $success =  $stmt->execute();
 
         $conn->close();
@@ -48,8 +48,8 @@ function deleteCard($cid) {
 function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `Card` SET `CName`=?, `CColorID`=?, `CCardType`=?, `CRarity`=? WHERE `CardID`=?");
-         $stmt->bind_param("sisss",$cname,$ccolorid,$ccardtype,$crarity,$cid);
+        $stmt = $conn->prepare("UPDATE `Card` SET `CName`=?, `CColorID`=?, `CCardType`=?, `CRarity`=?, `PackID`=? WHERE `CardID`=?");
+         $stmt->bind_param("sisssi",$cname,$ccolorid,$ccardtype,$crarity,$cid,$pid);
       $success =  $stmt->execute();
 
         $conn->close();
