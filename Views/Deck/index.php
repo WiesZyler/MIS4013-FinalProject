@@ -143,4 +143,5 @@ grid.on("rowClick", (...args) => {
   let d = args[1]._cells[2].data;
 
   openModal();
+});
 </script>
