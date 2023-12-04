@@ -49,7 +49,7 @@
 <div id="tb3"></div>
 
 
-
+<script>
 <!-- Javascript -->
 
 // assigning variables
@@ -97,7 +97,7 @@ function closeModal() {
 }
 
 
-<script>
+
 const grid = new gridjs.Grid({
   columns: ['Card ID', 'Card Name', 'Card Color', 'Card Type', 'Card Rarity'],
   sort: true,
