@@ -63,7 +63,7 @@ var cname = document.querySelector("#cname");
 var ccolorid = document.querySelector("#ccolorid");
 var ccardtype = document.querySelector("#ccardtype");
 var crarity = document.querySelector("#crarity");
-var crarity = document.querySelector("#pid");
+var pid = document.querySelector("#pid");
 var actionType = document.querySelector("#actionType");
 
 
@@ -172,6 +172,7 @@ const grid = new gridjs.Grid({
 				ccolorid.value = args[1]._cells[2].data;
     	ccardtype.value = args[1]._cells[3].data;
     	crarity.value = args[1]._cells[4].data;
+	  pid.value = args[1]._cells[5].data;
     
 
 
