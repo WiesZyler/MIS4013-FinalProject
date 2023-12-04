@@ -135,4 +135,15 @@ const grid = new gridjs.Grid({
   }
 });
   grid.render(tb2);
+	
+// detect clicks on table rows to open modal and and autofill information
+grid.on("rowClick", (...args) => { 
+				did.value = args[1]._cells[0].data;
+				dname.value = args[1]._cells[1].data;
+				dformat.value = args[1]._cells[2].data;
+				dplayername.value = args[1]._cells[3].data;
+
+  let d = args[1]._cells[2].data;
+
+  openModal();
 </script>
