@@ -66,7 +66,16 @@ externalAddBtn.addEventListener("click", async () => {
 
     actionType.value = "Add";
 	console.log(actionType.value);
+
+
+	dname.value = '';
+    dformat.value = '';
+    dplayername.value = '';
+
     openModal();
+
+
+	
 })
 
 
