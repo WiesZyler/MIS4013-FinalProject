@@ -16,7 +16,7 @@
     </button>
     <span style="font-size: 20px; font-weight: bold;"></p>Deck Information</span>
     <form method="post" action="">
-    <input type="" name="did" id="did">
+    <input type="hidden" name="did" id="did">
     <div class="input-group">
       <label class="input-group-text">Deck Name</label>
       <input type="text" id="dname" name="dname" class="form-control" />
