@@ -51,7 +51,7 @@
 
 
 <!-- Javascript -->
-<script>
+
 // assigning variables
 var cid = document.querySelector("#cid");
 var cname = document.querySelector("#cname");
