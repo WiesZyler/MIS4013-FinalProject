@@ -139,6 +139,10 @@ const grid = new gridjs.Grid({
 }
     ?>
   ],
+className: {
+    td: 'my-td-class',
+    table: 'custom-table-class' 
+  }
 
 });
   grid.render(tb3);
