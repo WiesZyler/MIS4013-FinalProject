@@ -84,21 +84,9 @@ let editbtn = document.querySelector("#editbtn");
 
 let deletebtn = document.querySelector("#deletebtn");
 deletebtn.addEventListener("click", async () => {
-			    Swal.fire({
-			        title: "Are you sure?",
-			        text: "You won't be able to revert this!",
-			        icon: "warning",
-			        showCancelButton: true,
-			        confirmButtonColor: "#3085d6",
-			        cancelButtonColor: "#d33",
-			        confirmButtonText: "Yes, delete it!"
-			    }).then((result) => {
-			        if (result.isConfirmed) {
 				    closeModal();
 			            actionType.value = "Delete";
 			            console.log(actionType.value);
-			        }
-			    });
                            });
 
                                
