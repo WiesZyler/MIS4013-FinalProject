@@ -45,7 +45,7 @@
 </div>
 
 <!-- Table -->
-<div id="tbl"></div>
+<div id="tb2"></div>
 
 
 <!-- Javascript -->
@@ -92,12 +92,9 @@ function closeModal() {
   const modal = document.getElementById('myModal');
   modal.style.display = 'none';
 }
-</script>
 
 
 
-<div id="tb2"></div>
-<script>
 const grid = new gridjs.Grid({
   columns: ['Deck ID', 'Deck Name', 'Format', 'Player Name'],
   sort: true,
