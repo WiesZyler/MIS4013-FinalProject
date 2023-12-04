@@ -20,7 +20,7 @@ function selectDeck() {
 function insertDeck($dName,$dFormat,$dPlayerName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `deck` (`dName`, `dFormat`,`dPlayerName`) VALUES (?, ?,?)");
+        $stmt = $conn->prepare("INSERT INTO `Deck` (`dName`, `dFormat`,`dPlayerName`) VALUES (?, ?,?)");
          $stmt->bind_param("sss",$dName,$dFormat,$dplayerName);
       $success =  $stmt->execute();
         $conn->close();
@@ -34,7 +34,7 @@ function insertDeck($dName,$dFormat,$dPlayerName) {
 function deleteDeck($did) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("Delete from deck where DeckID=?");
+        $stmt = $conn->prepare("Delete from `Deck` where DeckID=?");
          $stmt->bind_param("i", $did);
       $success =  $stmt->execute();
         $conn->close();
@@ -48,7 +48,7 @@ function deleteDeck($did) {
 function editDeck($deckName,$dFormat,$dPlayerName,$dID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `deck` SET `dName`=?, `dFormat`=?,`dPlayerName`=?  WHERE `DeckID`=?");
+        $stmt = $conn->prepare("UPDATE `Deck` SET `dName`=?, `dFormat`=?,`dPlayerName`=?  WHERE `DeckID`=?");
         $stmt->bind_param("sssi",$dName,$dFormat,dPlayerName,$did);  
         $success = $stmt->execute();  
         $conn->close();
