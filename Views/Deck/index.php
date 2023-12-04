@@ -63,9 +63,14 @@ var actionType = document.querySelector("#actionType");
 
 
 
+
+
+
+
+	
+// event listeners for modal buttons
 let externalAddBtn = document.querySelector("#externalAddBtn");
 externalAddBtn.addEventListener("click", async () => {
-CloseModal();
   actionType.value = "Add";
 console.log(actionType.value);
 
@@ -80,9 +85,7 @@ console.log(actionType.value);
 })
 
 
-
 	
-// event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
 			addbtn.addEventListener("click", async () => {
 				CloseModal();
