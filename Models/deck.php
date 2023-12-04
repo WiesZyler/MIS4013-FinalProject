@@ -49,7 +49,7 @@ function editDeck($deckName,$dformat,$dplayerName,$did) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Deck` SET `DName`=?, `DFormat`=?,`DPlayerName`=?  WHERE `DeckID`=?");
-        $stmt->bind_param("sssi",$dname,$dformat,dplayername,$did);  
+        $stmt->bind_param("sssi",$dname,$dformat,$dplayername,$did);  
         $success = $stmt->execute();  
         $conn->close();
         return $success;
