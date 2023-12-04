@@ -75,6 +75,18 @@ externalAddBtn.addEventListener("click", async () => {
   	openModal();
 
 
+	 let newEntry = [
+        did.value
+        dname.value,
+        dformat.value,
+        dplayername.value
+    ];
+
+    // Add the new entry to the table
+    grid.updateConfig({ data: [...grid.state.data, newEntry] }).forceRender();
+    // This assumes that 'grid' is the instance of your GridJS table
+});
+
 	
 })
 
