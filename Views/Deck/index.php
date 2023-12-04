@@ -63,12 +63,11 @@ var actionType = document.querySelector("#actionType");
 
 let externalAddBtn = document.querySelector("#externalAddBtn");
 externalAddBtn.addEventListener("click", async () => {
-    // Trigger the modal opening function when clicking the external add button
-	
+
     actionType.value = "Add";
 	console.log(actionType.value);
     openModal();
-});
+})
 
 
 
