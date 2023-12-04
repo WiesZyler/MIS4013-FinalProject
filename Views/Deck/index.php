@@ -23,12 +23,12 @@
     </div>
     <div class="input-group">
       <label class="input-group-text">Format</label>
-      <input type="date" id="dformat" name="dformat" class="form-control" />
+      <input type="text" id="dformat" name="dformat" class="form-control" />
     </div>
 
    <div class="input-group">
       <label class="input-group-text">Player Name</label>
-      <input type="date" id="dplayername" name="dplayername" class="form-control" />
+      <input type="text" id="dplayername" name="dplayername" class="form-control" />
     </div>
 
 
