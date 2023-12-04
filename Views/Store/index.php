@@ -84,7 +84,6 @@ let editbtn = document.querySelector("#editbtn");
 
 let deletebtn = document.querySelector("#deletebtn");
 deletebtn.addEventListener("click", async () => {
-			    closeModal();
 			    Swal.fire({
 			        title: "Are you sure?",
 			        text: "You won't be able to revert this!",
@@ -95,6 +94,7 @@ deletebtn.addEventListener("click", async () => {
 			        confirmButtonText: "Yes, delete it!"
 			    }).then((result) => {
 			        if (result.isConfirmed) {
+				    closeModal();
 			            actionType.value = "Delete";
 			            console.log(actionType.value);
 			        }
