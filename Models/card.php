@@ -19,7 +19,7 @@ function insertCard($cname,$ccolorid,$ccardtype,$crarity) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Card` (`CName`, `CColorID`, `CCardType`, `CRarity`) VALUES (?, ?,?,?)");
-         $stmt->bind_param("siss",$cname,$ccolorid,ccardtype,crarity);
+         $stmt->bind_param("siss",$cname,$ccolorid,$ccardtype,$crarity);
       $success =  $stmt->execute();
 
         $conn->close();
@@ -49,7 +49,7 @@ function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Card` SET `CName`=?, `CColorID`=?, `CCardType`=?, `CRarity`=? WHERE `CardID`=?");
-         $stmt->bind_param("sisss",$cname,$ccolorid,ccardtype,crarity,$cid);
+         $stmt->bind_param("sisss",$cname,$ccolorid,$ccardtype,$crarity,$cid);
       $success =  $stmt->execute();
 
         $conn->close();
