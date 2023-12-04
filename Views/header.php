@@ -2,18 +2,6 @@
 <html lang="en" >
   <head>
 
-
-	  
-
-	<style>
-		.my-td-class{
-background-color: black;
-}
- .custom-table-class{
-background-color: black;
-}
-	</style>
-
 	<link rel="stylesheet" href="style/bootstrap.css">
 	  <link rel="stylesheet" href="style/tables.css">
 	  
