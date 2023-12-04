@@ -15,7 +15,7 @@
       </svg>
     </button>
 	  
-<button id="externalAddBtn" class="btn btn-primary">Add Deck</button>
+
     <span style="font-size: 20px; font-weight: bold;"></p>Deck Information</span>
     <form method="post" action="">
     <input type="hidden" name="did" id="did">
