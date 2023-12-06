@@ -15,19 +15,30 @@
     </button>
     <span style="font-size: 20px; font-weight: bold;">Pack & Store Information</span>
     <form method="post" action="">
-   <select class="form-select" aria-label="Pack Name">
-  <option selected>Select A Pack</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+   <input type="hidden" name="psid" id="psid">
     <div class="input-group">
+      <input type="hidden" name="pid" id="pid">
       <label class="input-group-text">Pack Name</label>
-      <input type="text" id="pname" name="pname" class="form-control" />
+      <select class="form-select" aria-label="Pack Name">
+		  <option selected>Select A Pack</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+     </select>
     </div>
     <div class="input-group">
-      <label class="input-group-text">Release Date</label>
-      <input type="date" id="rdate" name="rdate" class="form-control" />
+      <input type="hidden" name="sid" id="sid">
+      <label class="input-group-text">Store Name</label>
+      <select class="form-select" aria-label="Store Name">
+		  <option selected>Select A Store</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+     </select>
+    </div>
+     <div class="input-group">
+      <label class="input-group-text">Price</label>
+      <input type="date" id="price" name="price" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
