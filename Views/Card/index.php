@@ -134,8 +134,8 @@ const grid = new gridjs.Grid({
   pagination: true,
   data: [
     <?php 
-  while ($card = $cards->fetch_assoc()) {
-    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', 'img/B.png', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "', '" . $card['PackID'] . "'],";
+ while ($card = $cards->fetch_assoc()) {
+    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '<img src=\"img/B.png\" alt=\"Card Image\" />', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "', '" . $card['PackID'] . "'],";
 }
     ?>
   ],
