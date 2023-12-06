@@ -100,7 +100,7 @@ const grid = new gridjs.Grid({
       border: '3px solid #ccc'
     },
     th: {
-      'background-color': 'rgba(20, 20, 80, 0.1)',
+      'background-color': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%);',
       color: '#382',
       'border-bottom': '3px solid #ccc',
       'text-align': 'center'
