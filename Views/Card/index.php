@@ -147,7 +147,7 @@ style: {
         th: {
 	      'background-image': 'linear-gradient(#17082e 0%, #1a0933 0%, #1a0933 1%, #0c1f4c 100%)',
       
-	      color: '#999',
+	      color: 'white',
 	      'text-shadow': '2px 2px 2px rgba(50, 251, 226, 0.3)',
 	      'border-color': '#0d1c49',
 	      'text-align': 'center'
