@@ -113,7 +113,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/" style="color:white;">Home</a>
+          <a class="nav-link active" aria-current="page" href="/" style="color:white; text-shadow: 2px 2px 2px rgba(50, 251, 226, 0.8);">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="card.php" style="color:white; text-shadow: 2px 2px 2px rgba(50, 251, 226, 0.8);">Card</a>
