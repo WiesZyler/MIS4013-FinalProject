@@ -59,6 +59,22 @@ function editCard($cname,$ccolorid,$ccardtype,$crarity,$cid,$pid) {
         throw $e;
     }
 }
+
+function selectColor($ccolorid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT ColorID, isRed, isBlue, isGreen, isBlack, isWhite FROM `Color` where `ColorID`=?");
+       $stmt->bind_param("i",$ccolorid);
+      $success =  $stmt->execute();
+
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 ?>
 
 
