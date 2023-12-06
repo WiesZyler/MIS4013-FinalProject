@@ -115,7 +115,7 @@ const grid = new gridjs.Grid({
 		'text-shadow': '2px 2px 2px rgba(50, 251, 226, 0.8)',
       		'text-align': 'center',
 		'background-color': 'rgba(0, 0, 99, 0.1)',
-    }
+    },
      footer:{
 		'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
 		color: '#999',
