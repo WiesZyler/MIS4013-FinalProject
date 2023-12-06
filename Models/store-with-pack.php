@@ -12,4 +12,46 @@ function selectStoreWithPack() {
         throw $e;
     }
 }
+
+function insertPack($psid, $sid, $pid, $price) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `PackStore` (`PSID`, `PSStoreID`, `PSPackID`, `PSPrice`) VALUES (?, ?, ?, ?)");
+         $stmt->bind_param("iiis", $psid, $sid, $pid, $price);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteCard($psid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("Delete from `PackStore` where PSID=?");
+         $stmt->bind_param("i", $psid);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function editCard($sid, $pid, $price, $psid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `PackStore` SET  `PSStoreID`=?, `PSPackID`=?, `PSPrice`=? WHERE `PSID`=?");
+        $stmt->bind_param("iiii", $sid, $pid, $price, $psid);  
+        $success = $stmt->execute();  
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
