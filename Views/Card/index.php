@@ -135,7 +135,7 @@ const grid = new gridjs.Grid({
   data: [
     <?php 
   while ($card = $cards->fetch_assoc()) {
-    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . $card['CColorID'] . "', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "', '" . $card['PackID'] . "'],";
+    echo "['" . $card['CardID'] . "', '" . $card['CName'] . "', '" . <img src="img/B.png" /> . "', '" . $card['CCardType'] . "', '" . $card['CRarity'] . "', '" . $card['PackID'] . "'],";
 }
     ?>
   ],
