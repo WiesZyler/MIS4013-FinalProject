@@ -95,30 +95,20 @@ const grid = new gridjs.Grid({
     }
     ?>
   ],
-  style: { // styles for table?
-    grid: {
-      'background-color': '#1e1e1e',
-      color: '#ddd',
-      'font-family': 'Arial, sans-serif',
-    },
-    table: {
-      border: '1px solid #2e2e2e',
+  style: {
+		table: {
+      border: '3px solid #ccc'
     },
     th: {
-      'background-color': '#2e2e2e',
-      color: '#ddd',
-      'border-bottom': '1px solid #2e2e2e',
-      'text-align': 'center',
+      'background-color': 'rgba(20, 20, 80, 0.1)',
+      color: '#382',
+      'border-bottom': '3px solid #ccc',
+      'text-align': 'center'
     },
     td: {
-      'border-bottom': '1px solid #2e2e2e',
-      'text-align': 'center',
-    },
-    pagination: {
-      'background-color': '#2e2e2e',
-      color: '#ddd',
-    },
-  }
+      'text-align': 'center'
+    }
+	}
 });
   grid.render(tbl); // display the table in its container div
 
