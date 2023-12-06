@@ -38,7 +38,7 @@
     </div>
      <div class="input-group">
       <label class="input-group-text">Price</label>
-      <input type="date" id="price" name="price" class="form-control" />
+      <input type="text" id="price" name="price" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
