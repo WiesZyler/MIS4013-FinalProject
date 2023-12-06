@@ -106,26 +106,26 @@
     <div class = "container">
       <nav class="navbar navbar-expand-lg" style="background-color: transparent; border: 4px solid #0d1c49; border-radius:5%; color: white;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#" style="color:white;">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/" style="color:white;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="card.php">Card</a>
+          <a class="nav-link" href="card.php" style="color:white;">Card</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="pack.php">Packs</a>
+          <a class="nav-link" href="pack.php" style="color:white;">Packs</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="deck.php">Decks</a>
+          <a class="nav-link" href="deck.php" style="color:white;">Decks</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="store.php">Stores</a>
+          <a class="nav-link" href="store.php" style="color:white;">Stores</a>
         </li>
        
       
