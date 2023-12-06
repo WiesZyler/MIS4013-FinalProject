@@ -27,7 +27,7 @@ function insertPack($psid, $sid, $pid, $price) {
     }
 }
 
-function deleteCard($psid) {
+function deletePack($psid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("Delete from `PackStore` where PSID=?");
@@ -41,7 +41,7 @@ function deleteCard($psid) {
     }
 }
 
-function editCard($sid, $pid, $price, $psid) {
+function editPack($sid, $pid, $price, $psid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `PackStore` SET  `PSStoreID`=?, `PSPackID`=?, `PSPrice`=? WHERE `PSID`=?");
@@ -49,6 +49,20 @@ function editCard($sid, $pid, $price, $psid) {
         $success = $stmt->execute();  
         $conn->close();
         return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectPack() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT PackID, PName, PReleaseDate FROM `Pack`");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
