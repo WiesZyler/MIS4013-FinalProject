@@ -127,6 +127,9 @@
         <li class="nav-item">
           <a class="nav-link" href="store.php" style="color:white; text-shadow: 2px 2px 2px rgba(50, 251, 226, 0.8);">Stores</a>
         </li>
+	<li class="nav-item">
+          <a class="nav-link" href="store.php" style="color:white; text-shadow: 2px 2px 2px rgba(50, 251, 226, 0.8);">Find A Pack</a>
+        </li>
        
       
         
