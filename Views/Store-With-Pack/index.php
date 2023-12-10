@@ -86,7 +86,7 @@ var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
-var optionDropdown = document.getElementById("#option");
+var optionDropdown = document.querySelector("#option");
 var packDropdown = document.querySelector("#packOpt");
 var storeDropdown = document.querySelector("#storeOpt");
 
