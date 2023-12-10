@@ -161,7 +161,7 @@ params = {
     <?php // PHP loop to collect data from database
      $packs2 = FindPack($pack['PackID']);
     while ($pack2 = $packs2->fetch_assoc()) {
-      echo "['" . $pack2['P.PName'] . "', '" . $pack2['P.PReleaseDate'] . "','" . $pack2['PSPrice'] . "'],";
+      echo "['" . $pack2['PName'] . "', '" . $pack2['PReleaseDate'] . "','" . $pack2['PSPrice'] . "'],";
     }
     ?>
   ],
