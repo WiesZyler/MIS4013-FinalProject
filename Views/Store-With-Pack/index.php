@@ -148,7 +148,7 @@ function toggleDropdowns() {
 
 packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
-optionDropdown.addEventListener("change", toggleDropdowns);
+optionDropdown.addEventListener("change", toggleDropdowns());
 toggleDropdowns();
 	
 // Table creation
