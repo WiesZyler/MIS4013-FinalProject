@@ -210,13 +210,17 @@ const grid = new gridjs.Grid({
     },
 	}
 });
-  grid.render(tbl1); // display the table in its container div
+  grid.render(tbl); // display the table in its container div
 
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
 				pid.value = args[1]._cells[0].data;
 				pname.value = args[1]._cells[1].data;
 				prdate.value = args[1]._cells[2].data;
+
+  let d = args[1]._cells[2].data;
+d = new Date(d); // convert date format
+prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
 });
 </script>
