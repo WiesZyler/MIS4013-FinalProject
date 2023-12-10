@@ -86,9 +86,9 @@ var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
-var optionDropdown = document.getElementById("option");
-var packDropdown = document.querySelector("packDiv");
-var storeDropdown = document.querySelector("storeDiv");
+var optionDropdown = document.getElementById("#option");
+var packDropdown = document.querySelector("#packOpt");
+var storeDropdown = document.querySelector("#storeOpt");
 
 // event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
