@@ -3,7 +3,7 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 <!-- Filter DropDowns -->
-<div class="input-group">
+ <div class="input-group">
  <label class="input-group-text">Option</label>
    <select class="form-select" aria-label="Option" id="option">
 		  <option selected>Select A Option</option>
@@ -13,9 +13,9 @@
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		   <?php // PHP loop to collect data from database
-    while ($pack = $packs->fetch_assoc()) {
-    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
-}
+    //while ($pack = $packs->fetch_assoc()) {
+    //echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
+//}
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
