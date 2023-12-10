@@ -76,7 +76,8 @@
 </div>
 
 <!-- Table -->
-<div id="tbl"></div>
+<div id="tbl1"></div>
+<div id="tbl2"></div>
 
 
 <!-- Javascript -->
@@ -152,18 +153,7 @@ optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
 var params;
- if (selectedOption === "1") {
-
-    } 
- else if (selectedOption === "2") {
-
-    }
-
-
-
-	
-// Table creation
-const grid = new gridjs.Grid({
+params = {
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   sort: true,
   pagination: {limit:10},
@@ -210,7 +200,9 @@ const grid = new gridjs.Grid({
 		'background-color': 'rgba(0, 0, 99, 0.1)',
     },
 	}
-});
+}	
+// Table creation
+const grid = new gridjs.Grid(params);
   grid.render(tbl); // display the table in its container div
 
 // detect clicks on table rows to open modal and and autofill information
