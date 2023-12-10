@@ -151,6 +151,11 @@ packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
+
+
+var tableData = [ while ($pack = $packs->fetch_assoc()) {
+      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+    }]
 	
 // Table creation
 const grid = new gridjs.Grid({
