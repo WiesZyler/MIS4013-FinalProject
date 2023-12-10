@@ -152,16 +152,34 @@ storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
+function ShowTable(){
+
+	switch 
+
+
+
+
+
+
+}
+
+
+
+
+
+
+	
 var params;
-params = {
+	
+// Table creation
+const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   sort: true,
   pagination: {limit:10},
   data: [
     <?php // PHP loop to collect data from database
-     $packs2 = FindPack($pack['PackID']);
-    while ($pack2 = $packs2->fetch_assoc()) {
-      echo "['" . $pack2['PName'] . "', '" . $pack2['PReleaseDate'] . "','" . $pack2['PSPrice'] . "'],";
+    while ($pack = $packs->fetch_assoc()) {
+      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
     }
     ?>
   ],
@@ -201,9 +219,7 @@ params = {
 		'background-color': 'rgba(0, 0, 99, 0.1)',
     },
 	}
-}	
-// Table creation
-const grid = new gridjs.Grid(params);
+});
   grid.render(tbl1); // display the table in its container div
 
 // detect clicks on table rows to open modal and and autofill information
