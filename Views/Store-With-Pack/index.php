@@ -12,9 +12,13 @@
      </select>
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
+		   <?php // PHP loop to collect data from database
+    while ($pack = $packs->fetch_assoc()) {
+	    ?>
+       <option value="<?php echo pack['PackID'] ?>"><?php echo $pack['PName'] ?></option>
+	    <?
+    }
+    ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
 		  <option selected>Select A Store</option>
