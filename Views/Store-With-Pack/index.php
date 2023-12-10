@@ -203,7 +203,7 @@ params = {
 }	
 // Table creation
 const grid = new gridjs.Grid(params);
-  grid.render(tbl); // display the table in its container div
+  grid.render(tbl1); // display the table in its container div
 
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
