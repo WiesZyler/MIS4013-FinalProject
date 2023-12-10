@@ -14,9 +14,8 @@
 		  <option selected>Select A Pack</option>
 		   <?php // PHP loop to collect data from database
     while ($pack = $packs->fetch_assoc()) {
-	    ?>
-       <option value="<?php echo pack['PackID'] ?>"><?php echo $pack['PName'] ?></option>
-	    <?
+    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
+}
     }
     ?>
      </select>
