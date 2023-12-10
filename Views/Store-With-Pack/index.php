@@ -153,8 +153,11 @@ optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
 
-var tableData = [ while ($pack = $packs->fetch_assoc()) {
+var tableData = [
+	<?php
+      while ($pack = $packs->fetch_assoc()) {
       echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+	      ?>
     }]
 	
 // Table creation
