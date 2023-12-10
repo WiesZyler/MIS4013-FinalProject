@@ -13,6 +13,34 @@ function selectStoreWithPack() {
     }
 }
 
+function FindPack($pid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("select PS.PSID, S.StoreID, P.PackID, S.SName, PS.PSPrice, P.PName, P.PReleaseDate from Store S JOIN PackStore PS on S.StoreID = PS.PSStoreID JOIN Pack P on PS.PSPackID = P.PackID where P.PackID=?");
+     $stmt->bind_param("i", $psid);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function FindStore($sid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("select PS.PSID, S.StoreID, P.PackID, S.SName, PS.PSPrice, P.PName, P.PReleaseDate from Store S JOIN PackStore PS on S.StoreID = PS.PSStoreID JOIN Pack P on PS.PSPackID = P.PackID where S.StoreID=?");
+         $stmt->bind_param("i", $psid);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertPack($psid, $sid, $pid, $price) {
     try {
         $conn = get_db_connection();
