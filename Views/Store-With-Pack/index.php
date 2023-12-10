@@ -159,7 +159,7 @@ params = {
   pagination: {limit:10},
   data: [
     <?php // PHP loop to collect data from database
-     packs2 = FindPack($pack['PackID'])
+     $packs2 = FindPack($pack['PackID'])
     while ($pack2 = $packs2->fetch_assoc()) {
       echo "['" . $pack2['P.PName'] . "', '" . $pack2['P.PReleaseDate'] . "','" . $pack2['PSPrice'] . "'],";
     }
