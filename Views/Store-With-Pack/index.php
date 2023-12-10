@@ -2,7 +2,27 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
-
+<!-- Filter DropDowns -->
+<div class="input-group">
+ <label class="input-group-text">Option</label>
+   <select class="form-select" aria-label="Option" id="option">
+		  <option selected>Select A Option</option>
+		  <option value="1" id="opt1">Search Store</option>
+		  <option value="2" id="opt2">Find A Pack</option>
+     </select>
+    <select class="form-select" aria-label="Pack Name" type="hidden">
+		  <option selected>Select A Pack</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+     </select>
+      <select class="form-select" aria-label="Store Name" type="hidden">
+		  <option selected>Select A Store</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+     </select>
+</div>
 
 <!-- Modal -->
 <div id="myModal" class="modal">
