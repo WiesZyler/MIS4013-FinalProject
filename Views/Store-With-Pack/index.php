@@ -16,7 +16,6 @@
     while ($pack = $packs->fetch_assoc()) {
     echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
 }
-    }
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
