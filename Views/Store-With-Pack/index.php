@@ -154,12 +154,6 @@ toggleDropdowns();
 
 function ShowTable(){
 
-	switch() {}
-
-
-
-
-
 
 }
 
