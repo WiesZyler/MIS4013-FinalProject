@@ -76,7 +76,7 @@
 </div>
 
 <!-- Table -->
-<div id="tbl1"></div>
+<div id="tbl"></div>
 <div id="tbl2"></div>
 
 
