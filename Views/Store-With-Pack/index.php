@@ -152,8 +152,24 @@ storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
+var tableData;
+var colums;
 function ShowTable(){
 
+	switch(optionDropdown.value){
+		case '1':
+		<?php $OptionSID ?> = storeDropdown.value
+		tableData = [
+			    <?php while ($pack = $packs->fetch_assoc()) 
+                           { 
+					   if (OptionsSID =  $store['StoreID']
+					   echo "['" . $store['StoreID'] . "', '" . $store['SName'] . "'],"; }?>
+			   ];
+		colums =  ['Pack ID', 'Pack Name', 'Release Date'];
+		break;
+
+			
+	}
 
 }
 
@@ -163,7 +179,7 @@ function ShowTable(){
 
 
 	
-var params;
+
 	
 // Table creation
 const grid = new gridjs.Grid({
