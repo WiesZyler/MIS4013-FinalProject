@@ -10,13 +10,13 @@
 		  <option value="1" id="opt1">Search Store</option>
 		  <option value="2" id="opt2">Find A Pack</option>
      </select>
-    <select class="form-select" aria-label="Pack Name" type="hidden">
+    <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
      </select>
-      <select class="form-select" aria-label="Store Name" type="hidden">
+      <select class="form-select" aria-label="Store Name" id="storeOpt">
 		  <option selected>Select A Store</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
@@ -82,6 +82,9 @@ var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
+var optionDropdown = document.getElementById("option");
+var packDropdown = document.querySelector("packOpt");
+var storeDropdown = document.querySelector("storeOpt");
 
 // event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
@@ -119,6 +122,31 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
+
+
+
+
+function toggleDropdowns() {
+    var selectedOption = optionDropdown.value;
+
+
+    packDropdown.style.display = "none";
+    storeDropdown.style.display = "none";
+
+   
+    if (selectedOption === "1") {
+        storeDropdown.style.display = "block";
+    } else if (selectedOption === "2") {
+        packDropdown.style.display = "block";
+    }
+}
+
+
+packDropdown.style.display = "none";
+storeDropdown.style.display = "none";
+optionDropdown.addEventListener("change", toggleDropdowns);
+toggleDropdowns();
+	
 // Table creation
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
