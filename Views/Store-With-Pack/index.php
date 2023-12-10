@@ -10,18 +10,22 @@
 		  <option value="1" id="opt1">Search Store</option>
 		  <option value="2" id="opt2">Find A Pack</option>
      </select>
+<div id="packDiv">
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
      </select>
+</div>
+<div id="storeDiv">
       <select class="form-select" aria-label="Store Name" id="storeOpt">
 		  <option selected>Select A Store</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
      </select>
+</div>
 </div>
 
 <!-- Modal -->
@@ -83,8 +87,8 @@ var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
 var optionDropdown = document.getElementById("option");
-var packDropdown = document.querySelector("packOpt");
-var storeDropdown = document.querySelector("storeOpt");
+var packDropdown = document.querySelector("packDiv");
+var storeDropdown = document.querySelector("storeDiv");
 
 // event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
