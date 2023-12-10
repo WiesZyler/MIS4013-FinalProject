@@ -19,10 +19,9 @@
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
-		  <option selected>Select A Store</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
+		while ($store = $stores->fetch_assoc()) {
+    echo '<option value="' . $store['StoreID'] . '">' . $store['SName'] . '</option>';
+}
      </select>
 </div>
 
