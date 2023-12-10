@@ -23,6 +23,7 @@
 		while ($store = $stores->fetch_assoc()) {
     echo '<option value="' . $store['StoreID'] . '">' . $store['SName'] . '</option>';
 }
+
 ?>
      </select>
 </div>
@@ -152,56 +153,7 @@ toggleDropdowns();
 
 var params;
  if (selectedOption === "1") {
- params = {
-  columns: ['Pack Name', 'Release Date', 'Price'],
-  sort: true,
-  pagination: {limit:10},
-  data: [
-    <?php // PHP loop to collect data from database
-    packs2 = FindPack($pack['PackID'])
-    while ($pack2 = $packs2->fetch_assoc()) {
-	if (
-      echo "['" . $pack2['PName'] . "', '" . $pack2['PReleaseDate'] . "','" . $pack2['PSPrice'] . "'],";
-    }
-    ?>
-  ],
-  style: {
-	table: {
-	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
-              border: '3px solid #0d1c49'
-               },
-        th: {
-	      'background-image': 'linear-gradient(#17082e 0%, #1a0933 0%, #1a0933 1%, #0c1f4c 100%)',
-      
-	      color: 'white',
-	      'text-shadow': '2px 2px 2px rgba(50, 251, 226, 0.3)',
-	      'border-color': '#0d1c49',
-	      'text-align': 'center'
-   	    },
-       td: {
-		'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
-		color: 'white',
-		'border-color': '#0d1c49',
-		'text-shadow': '2px 2px 2px rgba(50, 251, 226, 0.8)',
-      		'text-align': 'center',
-		'background-color': 'rgba(0, 0, 99, 0.1)',
-    },
-     footer:{
-		'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
-		color: 'white',
-		'border-color': '#0d1c49',
-      		'text-align': 'center',
-		'background-color': 'rgba(0, 0, 99, 0.1)',
-    },
-	  pagination:{
-		'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
-		color: 'white',
-		'border-color': '#0d1c49',
-      		'text-align': 'center',
-		'background-color': 'rgba(0, 0, 99, 0.1)',
-    },
-	}
-});
+
     } 
  else if (selectedOption === "2") {
 
