@@ -10,22 +10,18 @@
 		  <option value="1" id="opt1">Search Store</option>
 		  <option value="2" id="opt2">Find A Pack</option>
      </select>
-<div id="packDiv" style="display:block">
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
      </select>
-</div>
-<div id="storeDiv" style="display:block">
       <select class="form-select" aria-label="Store Name" id="storeOpt">
 		  <option selected>Select A Store</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
      </select>
-</div>
 </div>
 
 <!-- Modal -->
@@ -148,7 +144,7 @@ function toggleDropdowns() {
 
 packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
-optionDropdown.addEventListener("change", toggleDropdowns());
+optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 	
 // Table creation
