@@ -168,8 +168,8 @@ let tbl = document.querySelector("#tbl")
 		$tableData = [];
 		while ($deck = $deckswithcards->fetch_assoc()) {
 		    $tableData[] = [
-		      $deck['CardID'],
-		        $deck['DeckID'],
+		      $deck['DeckID'],
+		        $deck['CardID'],
 		        $deck['CName'],
                        $deck['DCQuantity'],
 			$deck['DCID']
@@ -184,7 +184,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Card ID', 'Deck ID', 'Card Name', 'Quantity', 'DCID'];
+	columns = ['Deck ID', 'Card ID', 'Card Name', 'Quantity', 'DCID'];
 	ShowTable();
 });
 cardDropdown.addEventListener("change", async () => {
@@ -198,8 +198,8 @@ let tbl = document.querySelector("#tbl")
 		$tableData = [];
 		while ($card = $cardswithdecks->fetch_assoc()) {
 		    $tableData[] = [
-			$card['DeckID'],
-		        $card['CardID'],
+			$card['CardID'],
+		        $card['DeckID'],
 		        $card['CName'],
                        $card['DCQuantity'],
 			$card['DCID']
@@ -214,7 +214,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Deck ID', 'Card ID', 'Deck Name', 'Quantity', 'DCID'];
+	columns = ['Card ID', 'Deck ID', 'Deck Name', 'Quantity', 'DCID'];
 ShowTable()
 });
 	
