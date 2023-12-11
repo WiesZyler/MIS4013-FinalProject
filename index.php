@@ -17,7 +17,7 @@ include "Views/header.php";
   <h2>Featured Cards</h2>
   <div class="col-lg-6">
     <div class="card mb-3 d-flex flex-row" style="background-image:linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); color: white; border-style:solid; border-color: #0d1c49;">
-      <img src="img/BL.png" class="card-img-top" alt="Black Lotus" style="width: 200px;">
+      <img src="img/BL.png" class="card-img-top" alt="Black Lotus" style="width: 200px; border-radius:2%">
       <div class="card-body" style="max-width: calc(100% - 200px);">
         <h5 class="card-title">Black Lotus</h5>
         <p class="card-text">Adds 3 mana of any single color of your choice to your mana pool, then is discarded. Tapping this artifact can be played as an interrupt.</p>
