@@ -13,14 +13,14 @@
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		   <?php // PHP loop to collect data from database
-    while ($packopt = $packs->fetch_assoc()) {
+    while ($packopt = $packsopt->fetch_assoc()) {
     echo '<option value="' . $packopt['PackID'] . '">' . $packopt['PName'] . '</option>';
 }
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
 	      <?php
-		while ($storeopt = $stores->fetch_assoc()) {
+		while ($storeopt = $storesopt->fetch_assoc()) {
     echo '<option value="' . $storeopt['StoreID'] . '">' . $storeopt['SName'] . '</option>';
 }
 
