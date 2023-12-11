@@ -11,7 +11,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertPack($_POST['psid'],$_POST['pid'],$_POST['price']))
+      if (insertPack($_POST['sid'],$_POST['pid'],$_POST['price']))
       {
          ?>
        <script>
