@@ -162,7 +162,25 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
     ];
 }
 ?>
+async function fetchDataAndFilter() {
+    try {
+        const response = await fetch('data-input.php');
+        const tableData = await response.json();
 
+        console.log(tableData);
+		var IDToFind = packDropdown.value;
+		var foundRows = tableData.filter(function(row) {
+		return row[0] === IDToFind; });
+		console.log(foundRows);
+    } catch (error) {
+        console.error('Error fetching or filtering data:', error);
+    }
+}
+fetchDataAndFilter();
+
+
+
+	
 async function ShowTable(){
 var tableData = await <?php echo json_encode($tableData); ?>;
 console.log(tableData);	
