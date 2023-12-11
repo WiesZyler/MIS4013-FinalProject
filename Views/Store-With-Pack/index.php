@@ -153,7 +153,7 @@ ShowTable()
 });
 
 	
-ShowTable(){
+function ShowTable(){
 <?php
 $tableData = [];
 while ($pack = $storeswithpacks->fetch_assoc()) {
