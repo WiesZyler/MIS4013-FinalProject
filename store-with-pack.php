@@ -3,7 +3,7 @@
 require_once("util-db.php");
 require_once("Models/store-with-pack.php");
 
-$PageTitle = "Packs";
+$PageTitle = "Pack Search";
 include "Views/header.php";
 
 if (isset($_POST['actionType']))
