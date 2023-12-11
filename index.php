@@ -14,7 +14,7 @@ include "Views/header.php";
 
     <!-- Featured Cards Section -->
     <div class="row mt-4">
-      <div class="col-md-12" style="display:flex; flex-direction:row;">
+      <div class="col-md-12">
         <h2>Featured Cards</h2>
         <div class="card mb-3" style="width:200px;">
           <img src="img/BL.png" class="card-img-top" alt="Card Image">
@@ -23,7 +23,8 @@ include "Views/header.php";
             <p class="card-text">Adds 3 mana of any single color of your choice to your mana pool, then is discarded. Tapping this artifact can be played as an interrupt.</p>
             <a href="https://www.tcgplayer.com/product/8687/magic-beta-edition-black-lotus" class="btn btn-primary">View Details</a>
           </div>
-          <div class="card mb-3" style="width:200px;">
+        </div>
+       <div class="card mb-3" style="width:200px;">
           <img src="img/GS.png" class="card-img-top" alt="Card Image">
           <div class="card-body">
             <h5 class="card-title">Gishath, Sun's Avatar</h5>
@@ -31,7 +32,6 @@ include "Views/header.php";
 Whenever Gishath, Sun's Avatar deals combat damage to a player, reveal that many cards from the top of your library. Put any number of Dinosaur creature cards from among them onto the battlefield and the rest on the bottom of your library in a random order.</p>
             <a href="https://www.tcgplayer.com/product/8687/magic-beta-edition-black-lotus" class="btn btn-primary">View Details</a>
           </div>
-        </div>
       </div>
     </div>
 
