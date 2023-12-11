@@ -136,26 +136,26 @@ function toggleDropdowns() {
     var selectedOption = optionDropdown.value;
 
 
-    packDropdown.style.display = "none";
-    storeDropdown.style.display = "none";
+    deckDropdown.style.display = "none";
+    cardDropdown.style.display = "none";
 
    
     if (selectedOption === "1") {
-        storeDropdown.style.display = "block";
+        deckDropdown.style.display = "block";
     } else if (selectedOption === "2") {
-        packDropdown.style.display = "block";
+        cardDropdown.style.display = "block";
     }
 }
 
 
-packDropdown.style.display = "none";
-storeDropdown.style.display = "none";
+deckDropdown.style.display = "none";
+cardDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
 var foundRows;
 var columns;
-packDropdown.addEventListener("change", async () => {
+deckDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
 	grid.destroy();
@@ -164,13 +164,13 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 	<?php
 		$tableData = [];
-		while ($pack = $storeswithpacks->fetch_assoc()) {
+		while ($deck = $deckswithcards->fetch_assoc()) {
 		    $tableData[] = [
-		        $pack['PackID'],
-		        $pack['StoreID'],
-		        $pack['SName'],
-		        $pack['PSPrice'],
-			$pack['PSID']
+		      $deck['CardID'],
+		        $deck['DeckID'],
+		        $deck['CName'],
+                       $deck['DCQuantity'],
+			$deck['DCID']
 		    ];
 		}
 	?>
@@ -192,13 +192,13 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 <?php
 		$tableData = [];
-		while ($store = $deckswithcards->fetch_assoc()) {
+		while ($store = $cardswithdecks->fetch_assoc()) {
 		    $tableData[] = [
-			$deck['CardID'],
-		        $deck['DeckID'],
-		        $deck['CName'],
-      $deck['DCQuantity'],
-			$deck['DCID']
+			$card['CardID'],
+		        $card['DeckID'],
+		        $card['CName'],
+                       $card['DCQuantity'],
+			$card['DCID']
 		    ];
 		}
 	?>
