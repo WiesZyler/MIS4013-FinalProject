@@ -134,12 +134,12 @@ toggleDropdowns();
 
 
 var tableData = [
-	<?php
-      while ($pack = $packs->fetch_assoc()) {
-      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
-      }
-	      ?>
-    ]
+    <?php
+    while ($pack = $packs->fetch_assoc()) {
+        echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+    }
+    ?>
+];
 
 	
 // Table creation
