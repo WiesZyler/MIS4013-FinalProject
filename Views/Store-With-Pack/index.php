@@ -133,7 +133,7 @@ storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 	
-packDropdown.addEventListener("change", () => {
+packDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
 	grid.destroy();
@@ -152,7 +152,8 @@ let tbl = document.querySelector("#tbl")
 		}
 	?>
 	var tableData = <?php echo json_encode($tableData); ?>;
-	var filterID = packDropdown.value
+	tableData = await tableData
+	var filterID = await packDropdown.value
 	console.log(tableData);	
 	var foundRows = tableData.filter(item => item[0] === filterID); 
 	console.log(foundRows);
