@@ -166,9 +166,9 @@ function GetData(){
 	var tableData = <?php echo json_encode($tableData); ?>;
 	return tableData
 }
-
+var TD = GetData();
 async function ShowTable(){
-var TD = await GetData();
+
 console.log(TD);	
 var IDToFind = packDropdown.value;
 var foundRows = TD.filter(function(row) {
