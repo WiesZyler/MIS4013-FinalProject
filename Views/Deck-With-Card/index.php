@@ -200,7 +200,7 @@ let tbl = document.querySelector("#tbl")
 		    $tableData[] = [
 			$card['CardID'],
 		        $card['DeckID'],
-		        $card['CName'],
+		        $card['DName'],
                        $card['DCQuantity'],
 			$card['DCID']
 		    ];
