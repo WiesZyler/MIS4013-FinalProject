@@ -111,18 +111,43 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
+function toggleDropdowns() {
+    var selectedOption = optionDropdown.value;
+
+
+    packDropdown.style.display = "none";
+    storeDropdown.style.display = "none";
+
+   
+    if (selectedOption === "1") {
+        storeDropdown.style.display = "block";
+    } else if (selectedOption === "2") {
+        packDropdown.style.display = "block";
+    }
+}
+
+
+packDropdown.style.display = "none";
+storeDropdown.style.display = "none";
+optionDropdown.addEventListener("change", toggleDropdowns);
+toggleDropdowns();
+
+
+var tableData = [
+	<?php
+      while ($pack = $packs->fetch_assoc()) {
+      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+      }
+	      ?>
+    ]
+
+	
 // Table creation
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
   sort: true,
   pagination: {limit:10},
-  data: [
-    <?php // PHP loop to collect data from database
-    while ($pack = $packs->fetch_assoc()) {
-      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
-    }
-    ?>
-  ],
+  data: [tableData],
   style: {
 	table: {
 	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
