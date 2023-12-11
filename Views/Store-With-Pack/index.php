@@ -38,16 +38,34 @@
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
       </svg>
     </button>
-    <span style="font-size: 20px; font-weight: bold;"></p>Pack Information</span>
+    <span style="font-size: 20px; font-weight: bold;">Pack & Store Information</span>
     <form method="post" action="">
-    <input type="hidden" name="pid" id="pid">
+   <input type="hidden" name="psid" id="psid">
     <div class="input-group">
       <label class="input-group-text">Pack Name</label>
-      <input type="text" id="pname" name="pname" class="form-control" />
+      <select class="form-select" aria-label="Pack Name" id="pid">
+		  <option selected>Select A Pack</option>
+		  <?php // PHP loop to collect data from database
+    while ($packselect = $packs->fetch_assoc()) {
+    echo '<option value="' . $packselect['PackID'] . '">' . $packselect['PName'] . '</option>';
+}
+    ?>
+     </select>
     </div>
     <div class="input-group">
-      <label class="input-group-text">Release Date</label>
-      <input type="date" id="rdate" name="rdate" class="form-control" />
+      <label class="input-group-text">Store Name</label>
+      <select class="form-select" aria-label="Store Name" id="sid">
+		  <option selected>Select A Store</option>
+		 <?php
+		while ($storeselect = $stores->fetch_assoc()) {
+    echo '<option value="' . $storeselect['StoreID'] . '">' . $storeselect['SName'] . '</option>';
+}
+?>
+     </select>
+    </div>
+     <div class="input-group">
+      <label class="input-group-text">Price</label>
+      <input type="text" id="price" name="price" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
@@ -240,8 +258,8 @@ grid = new gridjs.Grid({
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
 				pid.value = args[1]._cells[0].data;
-				pname.value = args[1]._cells[1].data;
-				prdate.value = args[1]._cells[2].data;
+				sid.value = args[1]._cells[1].data;
+				price.value = args[1]._cells[2].data;
 
   let d = args[1]._cells[2].data;
 d = new Date(d); // convert date format
