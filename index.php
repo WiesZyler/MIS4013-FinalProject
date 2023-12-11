@@ -16,7 +16,7 @@ include "Views/header.php";
    <div class="row mt-4">
   <h2>Featured Cards</h2>
   <div class="col-lg-6">
-    <div class="card mb-3 d-flex flex-row">
+    <div class="card mb-3 d-flex flex-row" style="background-image:linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); color: white; border-style:solid; border-color: #0d1c49;">
       <img src="img/BL.png" class="card-img-top" alt="Black Lotus" style="width: 200px;">
       <div class="card-body" style="max-width: calc(100% - 200px);">
         <h5 class="card-title">Black Lotus</h5>
@@ -26,7 +26,7 @@ include "Views/header.php";
     </div>
   </div>
   <div class="col-lg-6">
-    <div class="card mb-3 d-flex flex-row">
+    <div class="card mb-3 d-flex flex-row" style="background-image:linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); color: white; border-style: solid; border-color: #0d1c49;">
       <img src="img/GS.png" class="card-img-top" alt="Gishath, Sun's Avatar" style="width: 200px;">
       <div class="card-body" style="max-width: calc(100% - 200px);">
         <h5 class="card-title">Gishath, Sun's Avatar</h5>
