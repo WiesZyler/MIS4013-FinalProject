@@ -171,7 +171,7 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 <?php
 		$tableData = [];
-		while ($store = $storeswithpacks->fetch_assoc()) {
+		while ($store = $packswithstores->fetch_assoc()) {
 		    $tableData[] = [
 			$store['StoreID'],
 		        $store['PackID'],
