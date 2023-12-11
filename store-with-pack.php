@@ -11,7 +11,7 @@ if (isset($_POST['actionType']))
   switch ($_POST['actionType'])
     {
       case  "Add":
-      if (insertPack($_POST['pid'],$_POST['sid'],$_POST['price']))
+      if (insertPack($_POST['psid'],$_POST['pid'],$_POST['price']))
       {
          ?>
        <script>
@@ -47,7 +47,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editPack($_POST['pid'],$_POST['sid'],$_POST['price'],$_POST['psid']))
+      if (editPack($_POST['sid'],$_POST['pid'],$_POST['price'],$_POST['psid']))
       {
         ?>
        <script>
