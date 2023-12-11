@@ -71,8 +71,8 @@ $deckswithcards = selectDeckWithCard();
 $cardswithdecks = selectDeckWithCard();
 $decks = selectDeck();
 $decksopt = selectDeck();
-$cards = selectCards();
-$cardsopt = selectCards();
+$cards = selectCard();
+$cardsopt = selectCard();
 include "Views/Deck-With-Card/index.php";
 include "Views/footer.php";
 
