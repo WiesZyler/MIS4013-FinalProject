@@ -42,9 +42,8 @@
     <form method="post" action="">
    <input type="hidden" name="psid" id="psid">
     <div class="input-group">
-     <input type="hidden" name="psid" id="psid">
       <label class="input-group-text">Pack Name</label>
-      <select class="form-select" aria-label="Pack Name" id="pid">
+      <select class="form-select" aria-label="Pack Name" id="pid" name="pid">
 		  <option selected>Select A Pack</option>
 		  <?php // PHP loop to collect data from database
     while ($packselect = $packs->fetch_assoc()) {
@@ -55,7 +54,7 @@
     </div>
     <div class="input-group">
       <label class="input-group-text">Store Name</label>
-      <select class="form-select" aria-label="Store Name" id="sid">
+      <select class="form-select" aria-label="Store Name" id="sid" name="sid">
 		  <option selected>Select A Store</option>
 		 <?php
 		while ($storeselect = $stores->fetch_assoc()) {
