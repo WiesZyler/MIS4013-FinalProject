@@ -69,7 +69,9 @@ if (isset($_POST['actionType']))
 }
 $storeswithpacks = selectStoreWithPack();
 $packs = selectPack();
+$packsopt = selectPack();
 $stores = selectStore();
+$storesopt = selectStore();
 include "Views/Store-With-Pack/index.php";
 include "Views/footer.php";
 
