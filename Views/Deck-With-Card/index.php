@@ -192,7 +192,7 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 <?php
 		$tableData = [];
-		while ($store = $cardswithdecks->fetch_assoc()) {
+		while ($card = $cardswithdecks->fetch_assoc()) {
 		    $tableData[] = [
 			$card['CardID'],
 		        $card['DeckID'],
