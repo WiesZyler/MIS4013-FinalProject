@@ -260,10 +260,6 @@ grid.on("rowClick", (...args) => {
 				pid.value = args[1]._cells[0].data;
 				sid.value = args[1]._cells[1].data;
 				price.value = args[1]._cells[2].data;
-
-  let d = args[1]._cells[2].data;
-d = new Date(d); // convert date format
-prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
 });
 }
