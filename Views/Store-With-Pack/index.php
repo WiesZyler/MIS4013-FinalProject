@@ -141,6 +141,7 @@ var tableData = [
     ?>
 ];
 
+
 	
 // Table creation
 const grid = new gridjs.Grid({
