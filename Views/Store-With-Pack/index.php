@@ -257,9 +257,17 @@ grid = new gridjs.Grid({
 
 // detect clicks on table rows to open modal and and autofill information
 grid.on("rowClick", (...args) => { 
-				pid.value = args[1]._cells[0].data;
-				sid.value = args[1]._cells[1].data;
-				price.value = args[1]._cells[2].data;
+	
+    if (optionDropdown.value === "1") {
+        sid.value = args[1]._cells[0].data;
+	pid.value = args[1]._cells[1].data;
+	price.value = args[1]._cells[4].data;
+    } else if (optionDropdown.value === "2") {
+        pid.value = args[1]._cells[0].data;
+	sid.value = args[1]._cells[1].data;
+	price.value = args[1]._cells[3].data;
+    }
+}
   openModal();
 });
 }
