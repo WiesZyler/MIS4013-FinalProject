@@ -2,6 +2,33 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+<!-- Filter DropDowns -->
+ <div class="input-group">
+ <label class="input-group-text">Option</label>
+   <select class="form-select" aria-label="Option" id="option">
+		  <option selected>Select A Option</option>
+		  <option value="1" id="opt1">Search Store</option>
+		  <option value="2" id="opt2">Find A Pack</option>
+     </select>
+    <select class="form-select" aria-label="Pack Name" id="packOpt">
+		  <option selected>Select A Pack</option>
+		   <?php // PHP loop to collect data from database
+    while ($pack = $packs->fetch_assoc()) {
+    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
+}
+    ?>
+     </select>
+      <select class="form-select" aria-label="Store Name" id="storeOpt">
+	      <?php
+		while ($store = $stores->fetch_assoc()) {
+    echo '<option value="' . $store['StoreID'] . '">' . $store['SName'] . '</option>';
+}
+
+?>
+     </select>
+</div>
+
+
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -12,32 +39,16 @@
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
       </svg>
     </button>
-    <span style="font-size: 20px; font-weight: bold;">Pack & Store Information</span>
+    <span style="font-size: 20px; font-weight: bold;"></p>Pack Information</span>
     <form method="post" action="">
-   <input type="hidden" name="psid" id="psid">
+    <input type="hidden" name="pid" id="pid">
     <div class="input-group">
-      <input type="hidden" name="pid" id="pid">
       <label class="input-group-text">Pack Name</label>
-      <select class="form-select" aria-label="Pack Name">
-		  <option selected>Select A Pack</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-     </select>
+      <input type="text" id="pname" name="pname" class="form-control" />
     </div>
     <div class="input-group">
-      <input type="hidden" name="sid" id="sid">
-      <label class="input-group-text">Store Name</label>
-      <select class="form-select" aria-label="Store Name">
-		  <option selected>Select A Store</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-     </select>
-    </div>
-     <div class="input-group">
-      <label class="input-group-text">Price</label>
-      <input type="text" id="price" name="price" class="form-control" />
+      <label class="input-group-text">Release Date</label>
+      <input type="date" id="rdate" name="rdate" class="form-control" />
     </div>
     
     <input type="hidden" name="actionType" id="actionType" value="">
@@ -52,7 +63,6 @@
 
 <!-- Table -->
 <div id="tbl"></div>
-<div id="tbl2"></div>
 
 
 <!-- Javascript -->
@@ -101,6 +111,36 @@ function closeModal() {
   const modal = document.getElementById('myModal');
   modal.style.display = 'none';
 }
+
+function toggleDropdowns() {
+    var selectedOption = optionDropdown.value;
+
+
+    packDropdown.style.display = "none";
+    storeDropdown.style.display = "none";
+
+   
+    if (selectedOption === "1") {
+        storeDropdown.style.display = "block";
+    } else if (selectedOption === "2") {
+        packDropdown.style.display = "block";
+    }
+}
+
+
+packDropdown.style.display = "none";
+storeDropdown.style.display = "none";
+optionDropdown.addEventListener("change", toggleDropdowns);
+toggleDropdowns();
+
+
+var tableData = [
+	<?php
+      while ($pack = $packs->fetch_assoc()) {
+      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+      }
+	      ?>
+    ]
 
 	
 // Table creation
