@@ -162,12 +162,10 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
     ];
 }
 ?>
+
+async function ShowTable(){
 var tableData = await <?php echo json_encode($tableData); ?>;
 console.log(tableData);	
-function ShowTable(){
-
-
-	
 var IDToFind = packDropdown.value;
 var foundRows = tableData.filter(function(row) {
     return row[0] === IDToFind; 
