@@ -42,6 +42,7 @@
     <form method="post" action="">
    <input type="hidden" name="psid" id="psid">
     <div class="input-group">
+     <input type="hidden" name="psid" id="psid">
       <label class="input-group-text">Pack Name</label>
       <select class="form-select" aria-label="Pack Name" id="pid">
 		  <option selected>Select A Pack</option>
@@ -167,7 +168,8 @@ let tbl = document.querySelector("#tbl")
 		        $pack['PackID'],
 		        $pack['StoreID'],
 		        $pack['SName'],
-		        $pack['PSPrice']
+		        $pack['PSPrice'],
+			$pack['PSID']
 		    ];
 		}
 	?>
@@ -177,7 +179,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Pack ID', 'Store ID', 'Store Name', 'Price'];
+	columns = ['Pack ID', 'Store ID', 'Store Name', 'Price', 'PSID'];
 	ShowTable();
 });
 storeDropdown.addEventListener("change", async () => {
@@ -195,7 +197,8 @@ let tbl = document.querySelector("#tbl")
 		        $store['PackID'],
 		        $store['PName'],
 			$store['PReleaseDate'],
-		        $store['PSPrice']
+		        $store['PSPrice'],
+			$store['PSID']
 		    ];
 		}
 	?>
@@ -205,7 +208,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Store ID', 'Pack ID', 'Pack Name', 'Release Date', 'Price'];
+	columns = ['Store ID', 'Pack ID', 'Pack Name', 'Release Date', 'Price', 'PSID'];
 ShowTable()
 });
 	
@@ -262,10 +265,12 @@ grid.on("rowClick", (...args) => {
         sid.value = args[1]._cells[0].data;
 	pid.value = args[1]._cells[1].data;
 	price.value = args[1]._cells[4].data;
+	psid.value = args[1]._cells[5].data;
     } else if (optionDropdown.value === "2") {
         pid.value = args[1]._cells[0].data;
 	sid.value = args[1]._cells[1].data;
 	price.value = args[1]._cells[3].data;
+	psid.value = args[1]._cells[4].data;
     }
 
   openModal();
