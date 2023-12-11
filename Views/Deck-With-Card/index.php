@@ -271,7 +271,7 @@ grid.on("rowClick", (...args) => {
         did.value = args[1]._cells[0].data;
 	cid.value = args[1]._cells[1].data;
 	quantity.value = args[1]._cells[4].data;
-	dcid.value = args[1]._cells[5].data;
+	dcid.value = args[1]._cells[4].data;
     } else if (optionDropdown.value === "2") {
         cid.value = args[1]._cells[0].data;
 	did.value = args[1]._cells[1].data;
