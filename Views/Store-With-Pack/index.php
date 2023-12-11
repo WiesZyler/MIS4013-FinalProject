@@ -171,13 +171,13 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 <?php
 		$tableData = [];
-		while ($pack = $storeswithpacks->fetch_assoc()) {
+		while ($store = $storeswithpacks->fetch_assoc()) {
 		    $tableData[] = [
-			$pack['StoreID'],
-		        $pack['PackID'],
-		        $pack['PName'],
-			$pack['PReleaseDate'],
-		        $pack['PSPrice']
+			$store['StoreID'],
+		        $store['PackID'],
+		        $store['PName'],
+			$store['PReleaseDate'],
+		        $store['PSPrice']
 		    ];
 		}
 	?>
