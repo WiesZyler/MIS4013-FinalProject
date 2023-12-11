@@ -19,6 +19,7 @@
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
+	<option selected>Select A Store</option>
 	      <?php
 		while ($storeopt = $storesopt->fetch_assoc()) {
     echo '<option value="' . $storeopt['StoreID'] . '">' . $storeopt['SName'] . '</option>';
