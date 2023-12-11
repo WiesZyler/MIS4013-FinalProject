@@ -13,11 +13,11 @@ function selectStoreWithPack() {
     }
 }
 
-function insertPack($psid, $sid, $pid, $price) {
+function insertPack($sid, $pid, $price) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `PackStore` (`PSID`, `PSStoreID`, `PSPackID`, `PSPrice`) VALUES (?, ?, ?, ?)");
-         $stmt->bind_param("iiis", $psid, $sid, $pid, $price);
+        $stmt = $conn->prepare("INSERT INTO `PackStore` (`PSStoreID`, `PSPackID`, `PSPrice`) VALUES (?, ?, ?)");
+         $stmt->bind_param("iis", $sid, $pid, $price);
       $success =  $stmt->execute();
         $conn->close();
         return $success;
