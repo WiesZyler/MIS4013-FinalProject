@@ -178,7 +178,7 @@ let tbl = document.querySelector("#tbl")
 	?>
 	var tableData = <?php echo json_encode($tableData); ?>;
 	tableData = await tableData
-	var filterID = await deckDropdown.value
+	var filterID = deckDropdown.value
 	td=tableData;
 	fid=filterID;
 	console.log(tableData);	
