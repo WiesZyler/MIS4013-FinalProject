@@ -2,7 +2,7 @@
 function selectDeckWithCard() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("select DC.DCID, D.DeckID, C.CardID, D.DName, DC.DCQuantity, C.CName, C.CRarity, C.CCardType, D.DFormat, DPlayerName from Deck D JOIN DeckCard DC on D.DeckID = DC.DCID JOIN Card C on DC.DCCardID = C.CardID");
+        $stmt = $conn->prepare("select DC.DCID, D.DeckID, C.CardID, D.DName, DC.DCQuantity, C.CName, C.CRarity, C.CCardType, D.DFormat, DPlayerName from Deck D JOIN DeckCard DC on D.DeckID = DC.DCDeckID JOIN Card C on DC.DCCardID = C.CardID");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
