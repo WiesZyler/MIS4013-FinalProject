@@ -66,7 +66,8 @@
 
 <!-- Javascript -->
 <script>
-// assigning variables
+// assigning variables\
+var grid = null;
 var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
@@ -131,7 +132,28 @@ packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
+	
+packDropdown.addEventListener("change", () => {
+if (grid != null)
+{
+	grid.destroy();
+}
+let tbl = document.querySelector("#tbl")
+	tbl.innerHTML = "":
+ShowTable()
+});
+storeDropdown.addEventListener("change", () => {
+if (grid != null)
+{
+	grid.destroy();
+}
+let tbl = document.querySelector("#tbl")
+	tbl.innerHTML = "":
+ShowTable()
+});
 
+	
+ShowTable(){
 <?php
 $tableData = [];
 while ($pack = $storeswithpacks->fetch_assoc()) {
@@ -147,7 +169,7 @@ var tableData = <?php echo json_encode($tableData); ?>;
 console.log(tableData);
 	
 // Table creation
-const grid = new gridjs.Grid({
+grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
@@ -202,4 +224,5 @@ d = new Date(d); // convert date format
 prdate.value = moment(d).format("yyyy-MM-DD")
   openModal();
 });
+}
 </script>
