@@ -134,11 +134,11 @@ toggleDropdowns();
 
 <?php
 $tableData = [];
-while ($pack = $packs->fetch_assoc()) {
+while ($pack = $storeswithpacks->fetch_assoc()) {
     $tableData[] = [
         $pack['PackID'],
-        $pack['PName'],
-        $pack['PReleaseDate']
+        $pack['SName'],
+        $pack['PSPrice']
     ];
 }
 ?>
@@ -147,7 +147,7 @@ console.log(tableData);
 	
 // Table creation
 const grid = new gridjs.Grid({
-  columns: ['Pack ID', 'Pack Name', 'Release Date'],
+  columns: ['Pack ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
   data: tableData,
