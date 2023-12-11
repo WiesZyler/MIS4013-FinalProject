@@ -3,9 +3,6 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 
-     </select>
-</div>
-
 <!-- Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content" style="width: 400px; display: flex; flex-direction: column; align-items: center;">  	  
