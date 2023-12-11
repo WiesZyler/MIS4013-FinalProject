@@ -182,7 +182,7 @@ grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
-  data: tableData,
+  data: TD,
   style: {
 	table: {
 	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
