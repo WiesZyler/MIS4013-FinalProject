@@ -162,7 +162,7 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
     ];
 }
 ?>
-var tableData = <?php echo json_encode($tableData); ?>;
+var tableData = await <?php echo json_encode($tableData); ?>;
 console.log(tableData);	
 function ShowTable(){
 
