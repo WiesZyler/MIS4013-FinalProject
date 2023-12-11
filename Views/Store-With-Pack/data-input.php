@@ -1,5 +1,4 @@
 <?php
-require_once("Models/store-with-pack.php");
 $tableData = [];
 
 while ($pack = $storeswithpacks->fetch_assoc()) {
