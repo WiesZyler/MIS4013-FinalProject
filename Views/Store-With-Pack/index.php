@@ -137,21 +137,9 @@ packDropdown.addEventListener("change", () => {
 if (grid != null)
 {
 	grid.destroy();
-	var filterID = packDropdown.value
 }
 let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
-ShowTable()
-});
-storeDropdown.addEventListener("change", () => {
-if (grid != null)
-{
-	grid.destroy();
-}
-let tbl = document.querySelector("#tbl")
-	tbl.innerHTML = "";
-ShowTable()
-});
 	<?php
 		$tableData = [];
 		while ($pack = $storeswithpacks->fetch_assoc()) {
@@ -164,13 +152,23 @@ ShowTable()
 		}
 	?>
 	var tableData = <?php echo json_encode($tableData); ?>;
-async function ShowTable(){
-
-console.log(tableData);	
-var foundRows = tableData.filter(item => item[0] === filterID); 
-console.log(foundRows);
-
+	var filterID = packDropdown.value
+	console.log(tableData);	
+	var foundRows = tableData.filter(item => item[0] === filterID); 
+	console.log(foundRows);
+	ShowTable();
+});
+storeDropdown.addEventListener("change", () => {
+if (grid != null)
+{
+	grid.destroy();
+}
+let tbl = document.querySelector("#tbl")
+	tbl.innerHTML = "";
+ShowTable()
+});
 	
+async function ShowTable(){
 // Table creation
 grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
