@@ -164,7 +164,7 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
 ?>
 async function fetchDataAndFilter() {
     try {
-        const response = await fetch('data-input.php');
+        const response = await fetch('Views/Store-With-Pack/data-input.php');
         const tableData = await response.json();
 
         console.log(tableData);
