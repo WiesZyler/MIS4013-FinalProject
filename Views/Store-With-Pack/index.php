@@ -162,7 +162,7 @@ let tbl = document.querySelector("#tbl")
 	columns = ['Pack ID', 'Store ID', 'Store Name', 'Price'];
 	ShowTable();
 });
-storeDropdown.addEventListener("change", () => {
+storeDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
 	grid.destroy();
