@@ -187,7 +187,7 @@ let tbl = document.querySelector("#tbl")
 	columns = ['Card ID', 'Deck ID', 'Card Name', 'Quantity', 'DCID'];
 	ShowTable();
 });
-deckDropdown.addEventListener("change", async () => {
+cardDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
 	grid.destroy();
