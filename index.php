@@ -6,7 +6,7 @@ include "Views/header.php";
     <div class="row">
       <div class="col-md-12 text-center">
         <h1>Welcome to Magic: The Gathering</h1>
-        <p>Your introductory text or description here.</p>
+        <p>all the knowledge you need to start playing!</p>
         <a href="card.php" class="btn btn-primary">View Cards</a>
         <a href="pack.php" class="btn btn-secondary">Explore Packs</a>
       </div>
@@ -17,7 +17,7 @@ include "Views/header.php";
       <div class="col-md-12">
         <h2>Featured Cards</h2>
         <div class="card mb-3">
-          <img src="img/BL.png" class="card-img-top" alt="Card Image">
+          <img src="img/BL.png" class="card-img-top" alt="Card Image" style="width:200px;">
           <div class="card-body">
             <h5 class="card-title">Black Lotus</h5>
             <p class="card-text">Adds 3 mana of any single color of your choice to your mana pool, then is discarded. Tapping this artifact can be played as an interrupt.</p>
