@@ -180,7 +180,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Deck ID', 'Card ID', 'Deck Name', 'Quantity', 'DCID'];
+	columns = ['Card ID', 'Deck ID', 'Card Name', 'Quantity', 'DCID'];
 	ShowTable();
 });
 deckDropdown.addEventListener("change", async () => {
@@ -208,7 +208,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
-	columns = ['Deck ID', 'Card ID', 'Deck Name', 'Quantity', 'DCID'];
+	columns = ['Card ID', 'Deck ID', 'Deck Name', 'Quantity', 'DCID'];
 ShowTable()
 });
 	
