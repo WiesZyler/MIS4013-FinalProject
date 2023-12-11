@@ -132,16 +132,18 @@ storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
-
-var tableData = [
-    <?php
-    while ($pack = $packs->fetch_assoc()) {
-        echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
-    }
-    ?>
-];
-
-
+<?php
+$tableData = [];
+while ($pack = $packs->fetch_assoc()) {
+    $tableData[] = [
+        $pack['PackID'],
+        $pack['PName'],
+        $pack['PReleaseDate']
+    ];
+}
+?>
+var tableData = <?php echo json_encode($tableData); ?>;
+console.log(tableData);
 	
 // Table creation
 const grid = new gridjs.Grid({
