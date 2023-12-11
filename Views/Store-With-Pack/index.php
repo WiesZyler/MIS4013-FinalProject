@@ -132,7 +132,8 @@ packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
-	
+
+var foundRows
 packDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
@@ -155,7 +156,7 @@ let tbl = document.querySelector("#tbl")
 	tableData = await tableData
 	var filterID = await packDropdown.value
 	console.log(tableData);	
-	var foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
+	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
 	ShowTable();
 });
@@ -175,7 +176,7 @@ grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
-  data: tableData,
+  data: foundRows,
   style: {
 	table: {
 	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
