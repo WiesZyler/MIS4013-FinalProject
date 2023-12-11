@@ -152,18 +152,19 @@ let tbl = document.querySelector("#tbl")
 ShowTable()
 });
 	<?php
-		$tableData = [];
+		$tableData = []; 
 		while ($pack = $storeswithpacks->fetch_assoc()) {
 		    $tableData[] = [
-		        $pack['PackID'],
-		        $pack['StoreID'],
-		        $pack['SName'],
-		        $pack['PSPrice']
+		        'PackID' => $pack['PackID'],
+		        'StoreID' => $pack['StoreID'],
+		        'SName' => $pack['SName'],
+		        'PSPrice' => $pack['PSPrice']
 		    ];
 		}
+		$jsonTableData = json_encode($tableData, JSON_HEX_QUOT | JSON_HEX_TAG);
 	?>
-	var tableData = <?php echo json_encode($tableData); ?>;
-	var tableDataj = tableData.json();
+var tableData = <?php echo $jsonTableData; ?>;
+var tableDataj = JSON.parse(tableData);
 async function ShowTable(){
 
 console.log(tableDataj);	
