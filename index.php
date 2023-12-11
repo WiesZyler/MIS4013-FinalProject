@@ -14,8 +14,8 @@ include "Views/header.php";
 
     <!-- Featured Cards Section -->
    <div class="row mt-4">
+  <h2>Featured Cards</h2>
   <div class="col-lg-6">
-    <h2>Featured Cards</h2>
     <div class="card mb-3 d-flex flex-row">
       <img src="img/BL.png" class="card-img-top" alt="Black Lotus" style="width: 200px;">
       <div class="card-body" style="max-width: calc(100% - 200px);">
