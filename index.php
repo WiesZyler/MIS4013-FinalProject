@@ -2,7 +2,7 @@
 $PageTitle = "Home";
 include "Views/header.php";
 ?>
-  <div class="container mt-4">
+  <div class="container mt-4" style="color: white;">
     <div class="row">
       <div class="col-md-12 text-center">
         <h1>Welcome to Magic: The Gathering</h1>
@@ -14,7 +14,7 @@ include "Views/header.php";
 
     <!-- Featured Cards Section -->
    <div class="row mt-4">
-  <h2>Featured Cards</h2>
+  <h2 style="color: white;">Featured Cards</h2>
   <div class="col-lg-6">
     <div class="card mb-3 d-flex flex-row" style="background-image:linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); color: white; border-style:solid; border-color: #0d1c49;">
       <img src="img/BL.png" class="card-img-top" alt="Black Lotus" style="width: 200px; border-radius:4%">
@@ -42,7 +42,7 @@ include "Views/header.php";
 
     <div class="row mt-4">
       <div class="col-md-12">
-        <h2>Latest News</h2>
+        <h2 style="color: white;">Latest News</h2>
        
         <div class="card mb-3" style="background-image:linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%); color: white; border-style:solid; border-color: #0d1c49;">
           <div class="card-body">
