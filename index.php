@@ -14,7 +14,7 @@ include "Views/header.php";
 
     <!-- Featured Cards Section -->
     <div class="row mt-4">
-      <div class="col-md-12">
+      <div class="col-md-12" style="display:flex; flex-direction:row;">
         <h2>Featured Cards</h2>
         <div class="card mb-3" style="width:200px;">
           <img src="img/BL.png" class="card-img-top" alt="Card Image">
