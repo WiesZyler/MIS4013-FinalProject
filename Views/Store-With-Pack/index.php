@@ -139,7 +139,7 @@ if (grid != null)
 	grid.destroy();
 }
 let tbl = document.querySelector("#tbl")
-	tbl.innerHTML = "":
+	tbl.innerHTML = "";
 ShowTable()
 });
 storeDropdown.addEventListener("change", () => {
@@ -148,7 +148,7 @@ if (grid != null)
 	grid.destroy();
 }
 let tbl = document.querySelector("#tbl")
-	tbl.innerHTML = "":
+	tbl.innerHTML = "";
 ShowTable()
 });
 
