@@ -2,6 +2,32 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
+<!-- Filter DropDowns -->
+ <div class="input-group">
+ <label class="input-group-text">Option</label>
+   <select class="form-select" aria-label="Option" id="option">
+		  <option selected>Select A Option</option>
+		  <option value="1" id="opt1">Search Store</option>
+		  <option value="2" id="opt2">Find A Pack</option>
+     </select>
+    <select class="form-select" aria-label="Pack Name" id="packOpt">
+		  <option selected>Select A Pack</option>
+		   <?php // PHP loop to collect data from database
+    while ($pack = $packs->fetch_assoc()) {
+    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
+}
+    ?>
+     </select>
+      <select class="form-select" aria-label="Store Name" id="storeOpt">
+	      <?php
+		while ($store = $stores->fetch_assoc()) {
+    echo '<option value="' . $store['StoreID'] . '">' . $store['SName'] . '</option>';
+}
+
+?>
+     </select>
+</div>
+
 
 
 <!-- Modal -->
@@ -46,6 +72,9 @@ var pid = document.querySelector("#pid");
 var pname = document.querySelector("#pname");
 var prdate = document.querySelector("#rdate");
 var actionType = document.querySelector("#actionType");
+var optionDropdown = document.querySelector("#option");
+var packDropdown = document.querySelector("#packOpt");
+var storeDropdown = document.querySelector("#storeOpt");
 
 // event listeners for modal buttons
 let addbtn = document.querySelector("#addbtn");
@@ -83,6 +112,37 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
+function toggleDropdowns() {
+    var selectedOption = optionDropdown.value;
+
+
+    packDropdown.style.display = "none";
+    storeDropdown.style.display = "none";
+
+   
+    if (selectedOption === "1") {
+        storeDropdown.style.display = "block";
+    } else if (selectedOption === "2") {
+        packDropdown.style.display = "block";
+    }
+}
+
+
+packDropdown.style.display = "none";
+storeDropdown.style.display = "none";
+optionDropdown.addEventListener("change", toggleDropdowns);
+toggleDropdowns();
+
+
+var tableData = [
+	<?php
+      while ($pack = $packs->fetch_assoc()) {
+      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
+      }
+	      ?>
+    ]
+
+	
 // Table creation
 const grid = new gridjs.Grid({
   columns: ['Pack ID', 'Pack Name', 'Release Date'],
