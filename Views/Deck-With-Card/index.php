@@ -155,6 +155,7 @@ toggleDropdowns();
 
 var foundRows;
 var columns;
+var tableData;
 deckDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
@@ -174,7 +175,7 @@ let tbl = document.querySelector("#tbl")
 		    ];
 		}
 	?>
-	var tableData = <?php echo json_encode($tableData); ?>;
+	tableData = <?php echo json_encode($tableData); ?>;
 	tableData = await tableData
 	var filterID = await deckDropdown.value
 	console.log(tableData);	
@@ -202,7 +203,7 @@ let tbl = document.querySelector("#tbl")
 		    ];
 		}
 	?>
-	var tableData = <?php echo json_encode($tableData); ?>;
+	tableData = <?php echo json_encode($tableData); ?>;
 	tableData = await tableData
 	var filterID = await cardDropdown.value
 	console.log(tableData);	
