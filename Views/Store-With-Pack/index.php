@@ -13,9 +13,9 @@
     <select class="form-select" aria-label="Pack Name" id="packOpt">
 		  <option selected>Select A Pack</option>
 		   <?php // PHP loop to collect data from database
-    //while ($pack = $packs->fetch_assoc()) {
-    //echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
-//}
+    while ($pack = $packs->fetch_assoc()) {
+    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
+}
     ?>
      </select>
       <select class="form-select" aria-label="Store Name" id="storeOpt">
@@ -126,40 +126,6 @@ function closeModal() {
   const modal = document.getElementById('myModal');
   modal.style.display = 'none';
 }
-
-
-
-
-
-function toggleDropdowns() {
-    var selectedOption = optionDropdown.value;
-
-
-    packDropdown.style.display = "none";
-    storeDropdown.style.display = "none";
-
-   
-    if (selectedOption === "1") {
-        storeDropdown.style.display = "block";
-    } else if (selectedOption === "2") {
-        packDropdown.style.display = "block";
-    }
-}
-
-
-packDropdown.style.display = "none";
-storeDropdown.style.display = "none";
-optionDropdown.addEventListener("change", toggleDropdowns);
-toggleDropdowns();
-
-
-var tableData = [
-	<?php
-      while ($pack = $packs->fetch_assoc()) {
-      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
-      }
-	      ?>
-    ]
 	
 // Table creation
 const grid = new gridjs.Grid({
