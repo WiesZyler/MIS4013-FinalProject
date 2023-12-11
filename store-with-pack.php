@@ -72,6 +72,7 @@ $packs = selectPack();
 $packsopt = selectPack();
 $stores = selectStore();
 $storesopt = selectStore();
+include "Views/Store-With-Pack/data-input.php";
 include "Views/Store-With-Pack/index.php";
 include "Views/footer.php";
 
