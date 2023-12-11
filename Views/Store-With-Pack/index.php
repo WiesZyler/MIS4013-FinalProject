@@ -163,7 +163,7 @@ ShowTable()
 		}
 		$jsonTableData = json_encode($tableData);
 	?>
-var tableData = <?php echo $escapedJsonTableData; ?>;
+var tableData = <?php echo $tableData; ?>;
 var tableDataj = JSON.parse(tableData);
 async function ShowTable(){
 
