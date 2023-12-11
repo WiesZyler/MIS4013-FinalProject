@@ -152,22 +152,20 @@ let tbl = document.querySelector("#tbl")
 ShowTable()
 });
 	<?php
-		$tableData = []; 
+		$tableData = [];
 		while ($pack = $storeswithpacks->fetch_assoc()) {
 		    $tableData[] = [
-		        'PackID' => $pack['PackID'],
-		        'StoreID' => $pack['StoreID'],
-		        'SName' => $pack['SName'],
-		        'PSPrice' => $pack['PSPrice']
+		        $pack['PackID'],
+		        $pack['StoreID'],
+		        $pack['SName'],
+		        $pack['PSPrice']
 		    ];
 		}
-		$jsonTableData = json_encode($tableData);
 	?>
-var tableData = <?php echo $tableData; ?>;
-var tableDataj = JSON.parse(tableData);
+	var tableData = <?php echo json_encode($tableData); ?>;
 async function ShowTable(){
 
-console.log(tableDataj);	
+console.log(tableData);	
 var IDToFind = packDropdown.value;
 var foundRows = tableDataj.filter(function(row) {
     return row[0] === IDToFind; 
@@ -180,7 +178,7 @@ grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
-  data: tableDataj,
+  data: tableData,
   style: {
 	table: {
 	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
