@@ -133,7 +133,8 @@ storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
 
-var foundRows
+var foundRows;
+var columns;
 packDropdown.addEventListener("change", async () => {
 if (grid != null)
 {
@@ -158,6 +159,7 @@ let tbl = document.querySelector("#tbl")
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
+	columns = ['Pack ID', 'Store ID', 'Store Name', 'Price'];
 	ShowTable();
 });
 storeDropdown.addEventListener("change", () => {
@@ -167,13 +169,32 @@ if (grid != null)
 }
 let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
+<?php
+		$tableData = [];
+		while ($pack = $storeswithpacks->fetch_assoc()) {
+		    $tableData[] = [
+			$pack['StoreID'],
+		        $pack['PackID'],
+		        $pack['PName'],
+			$pack['PReleaseDate'],
+		        $pack['PSPrice']
+		    ];
+		}
+	?>
+	var tableData = <?php echo json_encode($tableData); ?>;
+	tableData = await tableData
+	var filterID = await storeDropdown.value
+	console.log(tableData);	
+	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
+	console.log(foundRows);
+	columns = ['Store ID', 'Pack ID', 'Pack Name', 'Release Date', 'Price'];
 ShowTable()
 });
 	
 async function ShowTable(){
 // Table creation
 grid = new gridjs.Grid({
-  columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
+  columns: columns,
   sort: true,
   pagination: {limit:10},
   data: foundRows,
