@@ -137,6 +137,7 @@ packDropdown.addEventListener("change", () => {
 if (grid != null)
 {
 	grid.destroy();
+	var filterID = packDropdown.value
 }
 let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
@@ -166,8 +167,7 @@ ShowTable()
 async function ShowTable(){
 
 console.log(tableData);	
-var IDToFind = packDropdown.value;
-var foundRows = tableData.filter(item => item[0] === IDToFind); 
+var foundRows = tableData.filter(item => item[0] === filterID); 
 console.log(foundRows);
 
 	
