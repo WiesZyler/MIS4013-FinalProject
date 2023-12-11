@@ -10,7 +10,7 @@
 		  <option value="1" id="opt1">Search Store</option>
 		  <option value="2" id="opt2">Find A Pack</option>
      </select>
-    <select class="form-select" aria-label="Pack Name" id="packOpt">
+    <select class="form-select" aria-label="Pack Name" id="packOpt" style="width:200px;>
 		  <option selected>Select A Pack</option>
 		   <?php // PHP loop to collect data from database
     while ($packopt = $packsopt->fetch_assoc()) {
@@ -18,7 +18,7 @@
 }
     ?>
      </select>
-      <select class="form-select" aria-label="Store Name" id="storeOpt">
+      <select class="form-select" aria-label="Store Name" id="storeOpt" style="width:200px;>
 	<option selected>Select A Store</option>
 	      <?php
 		while ($storeopt = $storesopt->fetch_assoc()) {
