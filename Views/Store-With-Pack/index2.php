@@ -2,29 +2,7 @@
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
-<!-- Filter DropDowns -->
- <div class="input-group">
- <label class="input-group-text">Option</label>
-   <select class="form-select" aria-label="Option" id="option">
-		  <option selected>Select A Option</option>
-		  <option value="1" id="opt1">Search Store</option>
-		  <option value="2" id="opt2">Find A Pack</option>
-     </select>
-    <select class="form-select" aria-label="Pack Name" id="packOpt">
-		  <option selected>Select A Pack</option>
-		   <?php // PHP loop to collect data from database
-    while ($pack = $packs->fetch_assoc()) {
-    echo '<option value="' . $pack['PackID'] . '">' . $pack['PName'] . '</option>';
-}
-    ?>
-     </select>
-      <select class="form-select" aria-label="Store Name" id="storeOpt">
-	      <?php
-		while ($store = $stores->fetch_assoc()) {
-    echo '<option value="' . $store['StoreID'] . '">' . $store['SName'] . '</option>';
-}
 
-?>
      </select>
 </div>
 
@@ -147,15 +125,6 @@ packDropdown.style.display = "none";
 storeDropdown.style.display = "none";
 optionDropdown.addEventListener("change", toggleDropdowns);
 toggleDropdowns();
-
-
-var tableData = [
-	<?php
-      while ($pack = $packs->fetch_assoc()) {
-      echo "['" . $pack['PackID'] . "', '" . $pack['PName'] . "', '" . $pack['PReleaseDate'] . "'],";
-      }
-	      ?>
-    ]
 
 	
 // Table creation
