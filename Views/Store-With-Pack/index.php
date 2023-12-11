@@ -151,7 +151,6 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 ShowTable()
 });
-function GetData(){
 	<?php
 		$tableData = [];
 		while ($pack = $storeswithpacks->fetch_assoc()) {
@@ -164,14 +163,12 @@ function GetData(){
 		}
 	?>
 	var tableData = <?php echo json_encode($tableData); ?>;
-	return tableData
-}
-var TD = GetData();
+	var tableDataj = tableData.json();
 async function ShowTable(){
 
-console.log(TD);	
+console.log(tableDataj);	
 var IDToFind = packDropdown.value;
-var foundRows = TD.filter(function(row) {
+var foundRows = tableDataj.filter(function(row) {
     return row[0] === IDToFind; 
 });
 console.log(foundRows);
@@ -182,7 +179,7 @@ grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
   sort: true,
   pagination: {limit:10},
-  data: TD,
+  data: tableDataj,
   style: {
 	table: {
 	     'background-image': 'linear-gradient(#17082e 0%, #1a0933 7%, #1a0933 80%, #0c1f4c 100%)',
