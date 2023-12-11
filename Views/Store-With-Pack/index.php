@@ -24,7 +24,6 @@
 		while ($storeopt = $storesopt->fetch_assoc()) {
     echo '<option value="' . $storeopt['StoreID'] . '">' . $storeopt['SName'] . '</option>';
 }
-
 ?>
      </select>
 </div>
