@@ -204,7 +204,7 @@ let tbl = document.querySelector("#tbl")
 	?>
 	var tableData = <?php echo json_encode($tableData); ?>;
 	tableData = await tableData
-	var filterID = await storeDropdown.value
+	var filterID = await cardDropdown.value
 	console.log(tableData);	
 	foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
