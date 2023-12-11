@@ -105,27 +105,6 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
-function toggleDropdowns() {
-    var selectedOption = optionDropdown.value;
-
-
-    packDropdown.style.display = "none";
-    storeDropdown.style.display = "none";
-
-   
-    if (selectedOption === "1") {
-        storeDropdown.style.display = "block";
-    } else if (selectedOption === "2") {
-        packDropdown.style.display = "block";
-    }
-}
-
-
-packDropdown.style.display = "none";
-storeDropdown.style.display = "none";
-optionDropdown.addEventListener("change", toggleDropdowns);
-toggleDropdowns();
-
 	
 // Table creation
 const grid = new gridjs.Grid({
