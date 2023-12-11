@@ -151,23 +151,27 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 ShowTable()
 });
-<?php
-$tableData = [];
-while ($pack = $storeswithpacks->fetch_assoc()) {
-    $tableData[] = [
-        $pack['PackID'],
-        $pack['StoreID'],
-        $pack['SName'],
-        $pack['PSPrice']
-    ];
+function GetData(){
+	<?php
+		$tableData = [];
+		while ($pack = $storeswithpacks->fetch_assoc()) {
+		    $tableData[] = [
+		        $pack['PackID'],
+		        $pack['StoreID'],
+		        $pack['SName'],
+		        $pack['PSPrice']
+		    ];
+		}
+	?>
+	var tableData = <?php echo json_encode($tableData); ?>;
+	return tableData
 }
-?>
 
 async function ShowTable(){
-var tableData = await <?php echo json_encode($tableData); ?>;
-console.log(tableData);	
+var TD = await GetData();
+console.log(TD);	
 var IDToFind = packDropdown.value;
-var foundRows = tableData.filter(function(row) {
+var foundRows = TD.filter(function(row) {
     return row[0] === IDToFind; 
 });
 console.log(foundRows);
