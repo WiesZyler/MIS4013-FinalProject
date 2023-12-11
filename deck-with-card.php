@@ -68,7 +68,7 @@ if (isset($_POST['actionType']))
 
 }
 $deckswithcards = selectDeckWithCard();
-$cardswithdecks = selectCardWithDeck();
+$cardswithdecks = selectDeckWithCard();
 $decks = selectDeck();
 $decksopt = selectDeck();
 $cards = selectCards();
