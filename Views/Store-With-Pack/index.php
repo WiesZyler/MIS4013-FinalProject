@@ -167,7 +167,7 @@ async function ShowTable(){
 
 console.log(tableData);	
 var IDToFind = packDropdown.value;
-var foundRows = tableDataj.filter(function(row) {
+var foundRows = tableData.filter(function(row) {
     return row[0] === IDToFind; 
 });
 console.log(foundRows);
