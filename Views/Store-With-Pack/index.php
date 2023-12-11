@@ -151,9 +151,6 @@ let tbl = document.querySelector("#tbl")
 	tbl.innerHTML = "";
 ShowTable()
 });
-
-	
-function ShowTable(){
 <?php
 $tableData = [];
 while ($pack = $storeswithpacks->fetch_assoc()) {
@@ -166,7 +163,10 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
 }
 ?>
 var tableData = <?php echo json_encode($tableData); ?>;
-console.log(tableData);
+console.log(tableData);	
+function ShowTable(){
+
+
 	
 var IDToFind = packDropdown.value;
 var foundRows = tableData.filter(function(row) {
