@@ -155,7 +155,7 @@ let tbl = document.querySelector("#tbl")
 	tableData = await tableData
 	var filterID = await packDropdown.value
 	console.log(tableData);	
-	var foundRows = tableData.filter(item => item[0] === 7); 
+	var foundRows = tableData.filter(item => item[0] === parseInt(filterID)); 
 	console.log(foundRows);
 	ShowTable();
 });
