@@ -267,7 +267,7 @@ grid.on("rowClick", (...args) => {
 	sid.value = args[1]._cells[1].data;
 	price.value = args[1]._cells[3].data;
     }
-}
+
   openModal();
 });
 }
