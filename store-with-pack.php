@@ -68,6 +68,7 @@ if (isset($_POST['actionType']))
 
 }
 $storeswithpacks = selectStoreWithPack();
+$packswithstores = selectStoreWithPack();
 $packs = selectPack();
 $packsopt = selectPack();
 $stores = selectStore();
