@@ -161,7 +161,8 @@ ShowTable()
 		        'PSPrice' => $pack['PSPrice']
 		    ];
 		}
-		$jsonTableData = json_encode($tableData, JSON_HEX_QUOT | JSON_HEX_TAG);
+		$jsonTableData = json_encode($tableData);
+		$escapedJsonTableData = addslashes($jsonTableData);
 	?>
 var tableData = <?php echo $jsonTableData; ?>;
 var tableDataj = JSON.parse(tableData);
