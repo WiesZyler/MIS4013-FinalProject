@@ -168,6 +168,13 @@ while ($pack = $storeswithpacks->fetch_assoc()) {
 var tableData = <?php echo json_encode($tableData); ?>;
 console.log(tableData);
 	
+var IDToFind = packDropdown.value;
+var foundRows = tableData.filter(function(row) {
+    return row[0] === IDToFind; 
+});
+console.log(foundRows);
+
+	
 // Table creation
 grid = new gridjs.Grid({
   columns: ['Pack ID', 'Store ID', 'Store Name', 'Price'],
