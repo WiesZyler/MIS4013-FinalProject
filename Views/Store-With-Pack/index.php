@@ -3,9 +3,9 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
 
 <!-- Filter DropDowns -->
- <div id="myFilter" class="input-group">
+ <div id="myFilter" class="input-group" style="width:400px;">
  <label class="input-group-text">Option</label>
-   <select class="form-select" aria-label="Option" id="option">
+   <select class="form-select" aria-label="Option" id="option"  style="width:200px;">
 		  <option selected>Select A Option</option>
 		  <option value="1" id="opt1">Search Store</option>
 		  <option value="2" id="opt2">Find A Pack</option>
