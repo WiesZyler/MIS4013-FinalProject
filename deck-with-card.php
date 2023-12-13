@@ -3,7 +3,7 @@
 require_once("util-db.php");
 require_once("Models/deck-with-card.php");
 
-$PageTitle = "Find a Deck";
+$PageTitle = "Find a Card";
 include "Views/header.php";
 
 if (isset($_POST['actionType']))
@@ -15,7 +15,7 @@ if (isset($_POST['actionType']))
       {
          ?>
        <script>
-         Swal.fire({title: "Success", text: "Deck Added!", icon: "success",});
+         Swal.fire({title: "Success", text: "Card Added!", icon: "success",});
       </script>
         <?php
           }
@@ -23,7 +23,7 @@ if (isset($_POST['actionType']))
       {
          ?>
        <script>
-         Swal.fire({title: "Error", text: "Deck Not Added!", icon: "error",});
+         Swal.fire({title: "Error", text: "Card Not Added!", icon: "error",});
       </script>
         <?php
       }
@@ -33,7 +33,7 @@ if (isset($_POST['actionType']))
       {
          ?>
        <script>
-         Swal.fire({title: "Success", text: "Deck Deleted!", icon: "success",});
+         Swal.fire({title: "Success", text: "Card Deleted!", icon: "success",});
       </script>
         <?php
           }
@@ -41,7 +41,7 @@ if (isset($_POST['actionType']))
       {
         ?>
        <script>
-         Swal.fire({title: "Error", text: "Deck Not Deleted!", icon: "error",});
+         Swal.fire({title: "Error", text: "Card Not Deleted!", icon: "error",});
       </script>
         <?php
       }
@@ -51,7 +51,7 @@ if (isset($_POST['actionType']))
       {
         ?>
        <script>
-         Swal.fire({title: "Success", text: "Deck Edited!", icon: "success",});
+         Swal.fire({title: "Success", text: "Card Edited!", icon: "success",});
       </script>
         <?php
           }
@@ -59,7 +59,7 @@ if (isset($_POST['actionType']))
       {
          ?>
        <script>
-         Swal.fire({title: "Error", text: "Deck Not Edited!", icon: "error",});
+         Swal.fire({title: "Error", text: "Card Not Edited!", icon: "error",});
       </script>
         <?php
       }
