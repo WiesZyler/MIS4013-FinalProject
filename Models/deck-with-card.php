@@ -16,7 +16,7 @@ function selectDeckWithCard() {
 function insertDeck($did, $cid, $quantity) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `DeckCard` (`DCCardID`, `DCDeckID`, `DCQuantity`) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `DeckCard` (`DCDeckID`, `DCCardID`, `DCQuantity`) VALUES (?, ?, ?)");
          $stmt->bind_param("iis", $did, $cid, $quantity);
       $success =  $stmt->execute();
         $conn->close();
