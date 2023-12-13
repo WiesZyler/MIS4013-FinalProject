@@ -47,7 +47,7 @@ if (isset($_POST['actionType']))
       }
         break;
        case  "Edit":
-      if (editPack($_POST['did'],$_POST['cid'],$_POST['quantity'],$_POST['dcid']))
+      if (editDeck($_POST['did'],$_POST['cid'],$_POST['quantity'],$_POST['dcid']))
       {
         ?>
        <script>
