@@ -17,7 +17,7 @@ function insertDeck($did, $cid, $quantity) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `DeckCard` (`DCCardID`, `DCDeckID`, `DCQuantity`) VALUES (?, ?, ?)");
-         $stmt->bind_param("iis", $cid, $pid, $quantity);
+         $stmt->bind_param("iis", $did, $cid, $quantity);
       $success =  $stmt->execute();
         $conn->close();
         return $success;
